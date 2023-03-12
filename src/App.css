@@ -7,10 +7,19 @@
   color: white;
   font-family: 'League Spartan', sans-serif;
   /* z-index: 0; */
+  box-sizing: border-box;
 }
 
 body{
   height: 100%;
+}
+
+h2 {
+  padding-top: 20px;
+}
+
+h3{
+  font-size: 25px;
 }
 
 
@@ -19,10 +28,18 @@ body{
   background: linear-gradient(90deg ,#181717 0%, #242424 25%, #333333 50%, #242424 75%, #181717 100%);
   height: 100vh;
   position: relative;
+  /* min-width: 3000px; */
+  width: 100vw;
+}
+
+.lateralLayout{
+  /* display: flex;
+  flex-direction: row; */
+  /* min-width: 200vw; */
 }
 
 *::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 
 .main{
@@ -85,8 +102,6 @@ body{
   visibility: visible !important;
 }
 
-
-
 .tooltip{
   position: absolute;
   margin-top: 0.5rem;
@@ -108,5 +123,247 @@ body{
 
 .proyectos{
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.projectsContainer{
+  display: flex;
+  position: relative;
+  height: 100%;
+  align-items: center;
   justify-content: center;
+}
+
+.carousel{
+  display: flex;
+  position: relative;
+  /* height: 100%; */
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carouselBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #191919;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.carouselBoxBefore{
+  position: absolute;
+  transform: translate(-150%);
+  width: 150px;
+  right: -150%;
+  height: 150px;
+  background-color: #191919;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.carouselBoxAfter{
+  position: absolute;
+  transform: translate(150%);
+  width: 150px;
+  left: 150%;
+  height: 150px;
+  background-color: #191919;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.animateLeft{
+  animation-duration: 2s;
+  animation-name: slideLeft;
+}
+.animate0Left{
+  animation-duration: 2s;
+  animation-name: slideLeft0;
+}
+.animate2Left{
+  animation-duration: 2s;
+  animation-name: slideLeft2;
+}
+
+.animateRight{
+  animation-duration: 2s;
+  animation-name: slideRight;
+}
+.animate0Right{
+  animation-duration: 2s;
+  animation-name: slideRight0;
+}
+.animate2Right{
+  animation-duration: 2s;
+  animation-name: slideRight2;
+}
+
+.carouselItemTitle{
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.descriptionContainer{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.descriptionContainer p{
+  text-align:center;
+}
+
+
+@media (max-width: 1200px){
+  .carouselBox{
+    width: 250px;
+    height: 250px;
+  }
+
+  .carouselBoxAfter{
+    width: 125px;
+    height: 125px;
+  }
+
+  .carouselBoxBefore{
+    width: 125px;
+    height: 125px;
+  }
+} 
+
+
+@media (max-width: 750px){
+  .carouselBox{
+    width: 250px;
+    height: 250px;
+  }
+
+  .carouselBoxAfter{
+    display: none;
+  }
+
+  .carouselBoxBefore{
+    display: none;
+  }
+} 
+
+/* Animations */
+
+/* Movimientos a la izquierda */
+@keyframes slideLeft {
+  from {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+  }
+
+  to {
+    transform: translate(-250%, -50%);
+    width: 125px;
+    height: 125px;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@keyframes slideLeft2 {
+  from {
+    /* transform: translate(150%);
+    left: 150%; */
+  }
+
+  to {
+    left: 50%;
+    transform: translate(-50%);
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes slideLeft0 {
+  0% {
+    transform: translate(-150%);
+    right: -150%;
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(250%);
+    width: 125px;
+    right: -150%;
+    height: 125px;
+  }
+}
+
+
+/* Movimientos a la derecha */
+@keyframes slideRight {
+  from {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+  }
+
+  to {
+    transform: translate(150%, -50%);
+    width: 125px;
+    height: 125px;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@keyframes slideRight2 {
+  0% {
+    /* transform: translate(150%, -50%);
+    width: 125px;
+    height: 125px;
+    top: 50%;
+    left: 50%; */
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-250%);
+    left: -100%;
+  }
+}
+
+@keyframes slideRight0 {
+  from {
+    /* transform: translate(-150%);
+    right: -150%; */
+  }
+
+  to {
+    right: 100%;
+    transform: translate(50%);
+    width: 250px;
+    height: 250px;
+  }
 }
