@@ -2,8 +2,7 @@ import './App.css';
 import Main from './components/layout/main/main';
 import Navbar from './components/layout/navbar/navbar';
 import Projects from './components/proyectos/proyectos'
-// import RouterRenderer from './components/layout/routerRenderer/routerRenderer';
-import {useState} from 'react';
+import Skills from './components/skills/skills';
 
 let navbarItems = [
   {
@@ -51,6 +50,7 @@ function App() {
       <div className='lateralLayout'>
         <Main></Main>
         <Projects></Projects>
+        <Skills></Skills>
       </div>
     </div>
   );
