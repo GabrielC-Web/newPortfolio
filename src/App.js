@@ -7,16 +7,20 @@ import Skills from './components/skills/skills';
 let navbarItems = [
   {
     view: 'Inicio',
-    id: '/'
-  },
-  {
-    view: 'Sobre mi',
-    id: '/about'
+    id: '#main'
   },
   {
     view: 'Proyectos',
-    id: '/projects'
-  }
+    id: '#projects'
+  },
+  {
+    view: 'Tecnologías',
+    id: '#skills'
+  },
+  // {
+  //   view: 'Sobre mi',
+  //   id: '#about'
+  // },
 ]
 
 

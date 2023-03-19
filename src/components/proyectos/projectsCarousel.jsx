@@ -40,7 +40,7 @@ const ProjectsCarousel = () => {
             changeItem()
             setTimeout(() => {
                 setHideText(false)
-            }, 2000);
+            }, 1000);
             return
         }
         //Animaciones a la derecha
@@ -49,7 +49,7 @@ const ProjectsCarousel = () => {
         changeItem()
         setTimeout(() => {
             setHideText(false)
-        }, 2000);
+        }, 1000);
     }
 
 
