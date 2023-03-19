@@ -1,7 +1,7 @@
 const Tooltip  = (text) => {
     return (
         <div className="tooltip">
-            {text.text.view}
+           <p>{text.text.view}</p> 
         </div>
     )
 }
