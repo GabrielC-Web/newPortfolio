@@ -168,7 +168,7 @@ img{
 .proyectos{
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -286,7 +286,7 @@ img{
 
 .skills{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
 }
