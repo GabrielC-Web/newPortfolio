@@ -1,7 +1,7 @@
 const Main = (props) => {
     return(
-        <div className="main container">
-            <h1 className="main-title">Bienvenidos al prototipo de adasd</h1>
+        <div id="main" className="main container">
+            <h1 className="main-title">Bienvenidos al portafolios de Gabriel</h1>
         </div>
     )
 }

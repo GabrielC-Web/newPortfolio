@@ -59,7 +59,7 @@ let skillList = [
 
 export default function Skills() {
     return (
-        <div className="skills container">
+        <div id="skills" className="skills container">
             <h2>Tecnologías</h2>
             <div className="itemsBox">
                 {skillList.map(s=> 

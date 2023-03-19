@@ -32,19 +32,19 @@ let navbarItems = [
 //     ]
 //   )
 
-function RouterRenderer() {
+// function RouterRenderer() {
 
-  return (
-    <BrowserRouter>
-        <Navbar key={navbarItems} items={navbarItems}></Navbar>
-        <Routes>
-            <Route exact path='/' element={<Main/>}>
-            </Route>
-            <Route path='/projects' element={<Proyectos/>}>
-            </Route>
-        </Routes>
-    </BrowserRouter>
-  );
-}
+//   return (
+//     <BrowserRouter>
+//         <Navbar key={navbarItems} items={navbarItems}></Navbar>
+//         <Routes>
+//             <Route exact path='/' element={<Main/>}>
+//             </Route>
+//             <Route path='/projects' element={<Proyectos/>}>
+//             </Route>
+//         </Routes>
+//     </BrowserRouter>
+//   );
+// }
 
-export default RouterRenderer;
+// export default RouterRenderer;
