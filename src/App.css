@@ -23,7 +23,7 @@ h1{
   font-size: 3rem;
 }
 
-h1, h2, h3, p {
+h1 {
   background: url(assets/img/white-texture-mini.jpg) no-repeat center;
   background-size: cover;
   background-clip:text; 
@@ -39,6 +39,10 @@ h2 {
 h3{
   font-size: 1.5rem;
   margin: 0 !important;
+}
+
+p{
+  font-weight: normal;
 }
 
 ::selection {
@@ -210,6 +214,9 @@ img{
 }
 
 .carouselBoxBefore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   transform: translate(-150%, 1%);
   width: var(--secudary-box-size);
@@ -225,6 +232,9 @@ img{
 }
 
 .carouselBoxAfter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   transform: translate(150%, 1%);
   width: var(--secudary-box-size);
@@ -237,6 +247,10 @@ img{
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.arrows{
+  font-size: 30px;
 }
 
 .animate0Left, .animateLeft, .animate2Left, .animate0Right, .animateRight, .animate2Right {
@@ -338,6 +352,10 @@ img{
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.invisible{
+  display: none;
 }
 
 
