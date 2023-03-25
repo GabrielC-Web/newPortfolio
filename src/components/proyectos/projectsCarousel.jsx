@@ -1,4 +1,7 @@
 import { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"    
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"    
 
 
 let projectItemsArray = [
@@ -34,18 +37,8 @@ const ProjectsCarousel = () => {
     //Inicia el proceso de animar el carousel
     function carouselMove(way) {
         //Animaciones a la izquierda
-        if(way){
-            setHideText(true)
-            setWay(true)
-            changeItem()
-            setTimeout(() => {
-                setHideText(false)
-            }, 1000);
-            return
-        }
-        //Animaciones a la derecha
         setHideText(true)
-        setWay(false)
+        setWay(way)
         changeItem()
         setTimeout(() => {
             setHideText(false)
@@ -72,14 +65,18 @@ const ProjectsCarousel = () => {
 
     return (
         <div className="carousel">
-            <div id="carouselBoxBefore" className={hideText? way?'carouselBoxBefore animate0Left': 'carouselBoxBefore animate0Right': "carouselBoxBefore"} onClick={() =>carouselMove(true)}></div>
+            <div id="carouselBoxBefore" className={hideText? way?'carouselBoxBefore animate0Left': 'carouselBoxBefore animate0Right': "carouselBoxBefore"} onClick={() =>carouselMove(true)}>
+                <FontAwesomeIcon className={hideText? 'invisible': 'arrows'} icon={faChevronLeft} />
+            </div>
             <div id="carouselBox" className={hideText? way? 'carouselBox animateLeft': 'carouselBox animateRight': "carouselBox"}>
                 <h3 className="carouselItemTitle">{hideText? '':projectItems.title}</h3>
                 <div className="descriptionContainer">
                     <p>{ hideText? '': projectItems.description}</p>
                 </div>
             </div>
-            <div id="carouselBoxAfter" className={hideText? way? 'carouselBoxAfter animate2Left': 'carouselBoxAfter animate2Right': "carouselBoxAfter"} onClick={() =>carouselMove(false)}></div>
+            <div id="carouselBoxAfter" className={hideText? way? 'carouselBoxAfter animate2Left': 'carouselBoxAfter animate2Right': "carouselBoxAfter"} onClick={() =>carouselMove(false)}>
+                <FontAwesomeIcon className={hideText? 'invisible': 'arrows'} icon={faChevronRight} />
+            </div>
         </div>
     )
 }
