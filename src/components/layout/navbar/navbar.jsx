@@ -1,14 +1,14 @@
-import { useState } from "react";
-import Tooltip from "../../../utilities/tooltip";
+// import { useState } from "react";
+// import Tooltip from "../../../utilities/tooltip";
  
 const Navbar = (items) => {
     let navItems = items.items
 
-    const [hash, setHash] = useState(window.location.hash)
+    // const [hash, setHash] = useState(window.location.hash)
 
-    function reloadNavbar(clicked) {
-        setHash(clicked)
-    }
+    // function reloadNavbar(clicked) {
+    //     setHash(clicked)
+    // }
 
 
 
