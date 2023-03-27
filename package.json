@@ -1,6 +1,6 @@
 {
   "name": "new-portfolio",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
