@@ -27,19 +27,21 @@ const ProjectsCarousel = () => {
     //El sentido en que se mueve el carrusel
     const [way, setWay] = useState(false)
 
+    //Posición o index del array de proyecto
+    const [position, setPosition] = useState(0)
+
     //Contiene la información del proyecto
-    const [projectItems, setProjectItems] = useState(projectItemsArray[0])
+    const [projectItems, setProjectItems] = useState(projectItemsArray[position])
 
     //Índice del item en el que estamos parados
-    let index = projectItemsArray.map(obj => obj.title).indexOf(projectItems.title)
-
+    // let index = projectItemsArray.map(obj => obj.title).indexOf(projectItems.title)
 
     //Inicia el proceso de animar el carousel
-    function carouselMove(way) {
+    function carouselMove(waySet) {
         //Animaciones a la izquierda
         setHideText(true)
-        setWay(way)
-        changeItem()
+        setWay(waySet)
+        changeItem(waySet)
         setTimeout(() => {
             setHideText(false)
         }, 1000);
@@ -47,20 +49,14 @@ const ProjectsCarousel = () => {
 
 
     //Cambia el objeto que contiene la información del proyecto
-    function changeItem() {
-        console.log(index);
-        //Voy al item anterior en la lista
-        if(way){
-            setProjectItems(projectItemsArray[(index - 1) >= 0? index - 1: projectItemsArray.length - 1])
-            index = projectItemsArray.map(obj => obj.title).indexOf(projectItems.title)
-            console.log(index);
-            return
-        }
-
-        //Voy al item siguiente en la lista
-        setProjectItems(projectItemsArray[(index + 1) < projectItemsArray.length? index + 1: 0])
-        index = projectItemsArray.map(obj => obj.title).indexOf(projectItems.title)
-        console.log(index);
+    function changeItem(waySet) {
+        setPosition(
+            // console.log(position),
+            waySet?
+            (((position - 1) < 0)? projectItemsArray.length - 1: position - 1):
+            ((position +1) < projectItemsArray.length? position + 1: 0)
+        )
+        setProjectItems(projectItemsArray[position])
     }
 
     return (

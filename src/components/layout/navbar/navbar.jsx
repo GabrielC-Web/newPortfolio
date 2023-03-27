@@ -16,8 +16,11 @@ const Navbar = (items) => {
         <div className="navBar">
             {navItems.map(s => {
                 return (
-                    <a key={s.view} href={s.id} className={hash === s.id?'navBarCircle tooltipContainer': 'navBarCircleInactive tooltipContainer'} onClick={() => reloadNavbar(s.id)}>
-                        <Tooltip text={[s, {url: hash, i: s.id}]}></Tooltip>
+                    // <a key={s.view} href={s.id} className={hash === s.id?'navBarCircle tooltipContainer': 'navBarCircleInactive tooltipContainer'} onClick={() => reloadNavbar(s.id)}>
+                    //     <Tooltip text={[s, {url: hash, i: s.id}]}></Tooltip>
+                    // </a>
+                    <a href={s.id}>
+                        {s.view}
                     </a>
                 )
             })}
