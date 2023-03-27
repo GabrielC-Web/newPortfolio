@@ -48,7 +48,7 @@ function App() {
   // window.addEventListener('wheel', detectScroll);
 
   return (
-    <div className='' >
+    <div className='layout' >
       {/* <RouterRenderer></RouterRenderer> */}
       <Navbar key={navbarItems} items={navbarItems}></Navbar>
       <div className='lateralLayout'>
