@@ -55,46 +55,15 @@ a{
 }
 
 /* Layout and main */
-.layout{
-  position: relative;
-}  
 
-.container{
+/* Background Colors */
+
+.darkTheme{
   background: linear-gradient(90deg ,#181717 0%, #242424 25%, #333333 50%, #242424 75%, #181717 100%);
-  height: fit-content;
-  min-height: 100vh !important;
-  padding: 60px 0;
-  position: relative;
-  width: 100vw;
-}
-
-.containerLast{
-  background: linear-gradient(90deg ,#181717 0%, #242424 25%, #333333 50%, #242424 75%, #181717 100%);
-  height: fit-content;
-  min-height: calc(100vh - 60px) !important;
-  position: relative;
-  width: 100vw;
-  padding: 60px 0;
-}
-
-.lateralLayout{
-  height:calc(100vh - 60px) !important;
 }
 
 *::-webkit-scrollbar {
   display: none;
-}
-
-.main{
-  /* height: 100vh; */
-  position: relative;
-}
-
-.main-title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 img{
@@ -172,7 +141,7 @@ img{
   display: flex;
   width: fit-content;
   white-space: nowrap ;
-  border-radius: 5px;
+  border-radius: 6px;
   visibility: hidden;
 }
 
@@ -188,44 +157,11 @@ img{
   display: flex;
   width: fit-content;
   white-space: nowrap ;
-  border-radius: 5px;
+  border-radius: 6px;
   visibility: visible;
 }
 
 /* Proyectos */
-
-.proyectos{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.projectsContainer{
-  display: flex;
-  position: relative;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.projectsGrid{
-  display: grid;
-  gap: 3rem;
-  margin-top: 3rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.projectsBox{
-  width: var(--main-box-size);
-  height: var(--main-box-size);
-  background-color: #191919;
-  border-radius: 10px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-}
 
 .carousel{
   display: flex;
@@ -341,14 +277,6 @@ img{
 
 /* Skills */
 
-.skills{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
 .technologyItem:hover > .tooltip{
   visibility: visible;
 }
@@ -360,12 +288,6 @@ img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.contactItemsBox{
-  display: flex;
-  justify-content: center;
-  position: relative;
 }
 
 .itemsBox{
@@ -385,17 +307,17 @@ img{
   padding: 1.5rem;
   cursor: pointer;
   background-color: #0F0F0F;
-  border-radius: 5px;
+  border-radius: 6px;
   justify-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80px;
   height: 80px;
-  animation-name: floating;
+  /* animation-name: floating;
   animation-duration: 2s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 
 .invisible{

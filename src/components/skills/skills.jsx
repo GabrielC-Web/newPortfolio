@@ -59,11 +59,11 @@ let skillList = [
 
 export default function Skills() {
     return (
-        <div id="skills" className="skills container">
+        <div id="skills" className="flex justify-start flex-col items-center container">
             <h2>Tecnologías</h2>
             <div className="itemsBox">
                 {skillList.map(s=> 
-                <div className="contactItemsBox">
+                <div className="flex justify-center relative">
                     {<SkillItem item={s}></SkillItem>}
                 </div>)
                 }

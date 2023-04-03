@@ -17,7 +17,7 @@ let projectItemsArray = [
 
 const ProjectsGrid = () => {
     return(
-        <div className="projectsGrid">
+        <div className="grid gap-12 mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {
                 projectItemsArray.map(s =>
                     <ProjectBox project={s}></ProjectBox>

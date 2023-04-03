@@ -1,3 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply h-fit min-h-screen py-16 relative min-w-full darkTheme;
+  }
+
+  .darkTheme{
+    background: linear-gradient(90deg ,#181717 0%, #242424 25%, #333333 50%, #242424 75%, #181717 100%);;
+  }
+
+  .darkBoxColor{
+    background: #0F0F0F;
+  }
+
+  .flexCentered{
+    @apply flex items-center justify-center
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

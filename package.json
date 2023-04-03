@@ -1,6 +1,6 @@
 {
   "name": "new-portfolio",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
   }
 }
