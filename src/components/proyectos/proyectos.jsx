@@ -3,9 +3,9 @@ import ProjectsGrid from "./projectsGrid"
 
 const Proyectos = () => {
     return (
-        <div id="projects" className="proyectos container">
+        <div id="projects" className="flexCentered flex-col container">
             <h2>Proyectos</h2>
-            <div className="projectsContainer">
+            <div className="flexCentered relative h-full">
                 {/* <ProjectsCarousel></ProjectsCarousel> */}
                 <ProjectsGrid></ProjectsGrid>
             </div>

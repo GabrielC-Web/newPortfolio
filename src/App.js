@@ -48,10 +48,10 @@ function App() {
   // window.addEventListener('wheel', detectScroll);
 
   return (
-    <div className='layout' >
+    <div className='relative' >
       {/* <RouterRenderer></RouterRenderer> */}
       <Navbar key={navbarItems} items={navbarItems}></Navbar>
-      <div className='lateralLayout'>
+      <div className='h-[calc(100vh - 4rem)]'>
         <Main></Main>
         <Projects></Projects>
         <Skills></Skills>
