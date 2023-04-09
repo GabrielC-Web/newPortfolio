@@ -74,6 +74,15 @@ img{
   box-shadow: 0 0 5px 5px rgb(0 0 0 / 12%) !important;
 }
 
+/* .effectTrigger:hover .opacityTriggered{
+  background: linear-gradient(rgb(51, 51, 51, 0.5), rgb(51, 51, 51, 0.5)) !important;
+} */
+
+.effectTrigger:hover .displayTriggered{
+  display: flex !important;
+}
+
+
 /* Navbar */
 
 .navBar{
@@ -124,20 +133,20 @@ img{
 .navBarCircleInactive:hover > .tooltipActive{
   visibility: hidden !important;
 }
-.navBarCircleInactive:hover > .tooltip{
+.tooltipContainer:hover > .tooltip{
   visibility: visible !important;
 }
 
 
 .tooltip{
   position: absolute;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   top: 105%;
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
   background-color: #161616;
-  padding: 0.5rem;
+  padding: 0.25rem;
   display: flex;
   width: fit-content;
   white-space: nowrap ;
@@ -161,99 +170,18 @@ img{
   visibility: visible;
 }
 
-/* Proyectos */
+/* 
 
-.carousel{
-  display: flex;
-  position: relative;
-  /* height: 100%; */
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.carouselBox{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -51%);
-  width: var(--main-box-size);
-  height: var(--main-box-size);
-  background-color: #191919;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-direction: column;
-  animation-name: floatingCarousel;
-  animation-timing-function: linear;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-.carouselBoxBefore{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  transform: translate(-150%, 1%);
-  width: var(--secudary-box-size);
-  right: -150%;
-  height: var(--secudary-box-size);
-  background-color: #191919;
-  border-radius: 10px;
-  cursor: pointer;
-  animation-name: floatingCarousel0;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.carouselBoxAfter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  transform: translate(150%, 1%);
-  width: var(--secudary-box-size);
-  height: var(--secudary-box-size);
-  left: 150%;
-  background-color: #191919;
-  border-radius: 10px;
-  cursor: pointer;
-  animation-name: floatingCarousel2;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗░██████╗
+██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝██╔════╝
+██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░╚█████╗░
+██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░░╚═══██╗
+██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░██████╔╝
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░╚═════╝░
+ */
 
 .arrows{
   font-size: 30px;
-}
-
-.animate0Left, .animateLeft, .animate2Left, .animate0Right, .animateRight, .animate2Right {
-  animation-duration: 1s;
-}
-
-.animateLeft{
-  animation-name: slideLeft;
-}
-.animate0Left{
-  animation-name: slideLeft0;
-}
-.animate2Left{
-  animation-name: slideLeft2;
-}
-
-.animateRight{
-  animation-name: slideRight;
-}
-.animate0Right{
-  animation-name: slideRight0;
-}
-.animate2Right{
-  animation-name: slideRight2;
 }
 
 .carouselItemTitle{
@@ -264,18 +192,32 @@ img{
 }
 
 .descriptionContainer{
-  display: flex;
+  /* display: flex;
   justify-content: center;
   padding: 20px;
   font-weight: bold;
-  align-items: center;
+  align-items: center; */
 }
 
 .descriptionContainer p{
   text-align:center;
 }
 
-/* Skills */
+.projectBoxButton{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+
+░██████╗██╗░░██╗██╗██╗░░░░░██╗░░░░░░██████╗
+██╔════╝██║░██╔╝██║██║░░░░░██║░░░░░██╔════╝
+╚█████╗░█████═╝░██║██║░░░░░██║░░░░░╚█████╗░
+░╚═══██╗██╔═██╗░██║██║░░░░░██║░░░░░░╚═══██╗
+██████╔╝██║░╚██╗██║███████╗███████╗██████╔╝
+╚═════╝░╚═╝░░╚═╝╚═╝╚══════╝╚══════╝╚═════╝░
+ */
 
 .technologyItem:hover > .tooltip{
   visibility: visible;
@@ -314,236 +256,31 @@ img{
   align-items: center;
   width: 80px;
   height: 80px;
-  /* animation-name: floating;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; */
 }
 
 .invisible{
   display: none;
 }
 
+/* 
+
+███╗░░░███╗███████╗██████╗░██╗░█████╗░░██████╗░██╗░░░██╗███████╗██████╗░██╗███████╗░██████╗
+████╗░████║██╔════╝██╔══██╗██║██╔══██╗██╔═══██╗██║░░░██║██╔════╝██╔══██╗██║██╔════╝██╔════╝
+██╔████╔██║█████╗░░██║░░██║██║███████║██║██╗██║██║░░░██║█████╗░░██████╔╝██║█████╗░░╚█████╗░
+██║╚██╔╝██║██╔══╝░░██║░░██║██║██╔══██║╚██████╔╝██║░░░██║██╔══╝░░██╔══██╗██║██╔══╝░░░╚═══██╗
+██║░╚═╝░██║███████╗██████╔╝██║██║░░██║░╚═██╔═╝░╚██████╔╝███████╗██║░░██║██║███████╗██████╔╝
+╚═╝░░░░░╚═╝╚══════╝╚═════╝░╚═╝╚═╝░░╚═╝░░░╚═╝░░░░╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝╚══════╝╚═════╝░
+ */
 
 
-/* Mediaqueries */
-
-@media (max-width: 1200px){
-  .carouselBox{
-    width: var(--main-box-size);
-    height: var(--main-box-size);
-  }
-
-  .carouselBoxAfter{
-    width: var(--secudary-box-size);
-    height: var(--secudary-box-size);
-  }
-
-  .carouselBoxBefore{
-    width: var(--secudary-box-size);
-    height: var(--secudary-box-size);
-  }
-
-  :root {
-    --main-box-size: 250px;
-    --secudary-box-size: 125px
-  }
-} 
-
-@media (max-width: 912px) {
-  .projectsGrid{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 612px) {
-  .projectsGrid{
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .container{
-    height: fit-content;
-    min-height: 100vh !important;
-  }
-}
-
-
-@media (max-width: 750px){
-  .carouselBox{
-    width: var(--main-box-size);
-    height: var(--main-box-size);
-  }
-
-  .carouselBoxAfter{
-    display: none;
-  }
-
-  .carouselBoxBefore{
-    display: none;
-  }
-} 
-
-/* Animations */
-
-/* Movimientos a la izquierda */
-@keyframes slideLeft {
-  from {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: var(--main-box-size);
-    height: var(--main-box-size);
-  }
-
-  to {
-    transform: translate(-250%, -50%);
-    width: var(--secudary-box-size);
-    height: var(--secudary-box-size);
-    top: 50%;
-    left: 50%;
-  }
-}
-
-@keyframes slideLeft2 {
-  from {
-    /* transform: translate(150%);
-    left: 150%; */
-  }
-
-  to {
-    left: 50%;
-    transform: translate(-50%);
-    width: var(--main-box-size);
-    height: var(--main-box-size);
-  }
-}
-
-@keyframes slideLeft0 {
-  0% {
-    transform: translate(-150%);
-    right: -150%;
-  }
-
-  50%{
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(250%);
-    width: var(--secudary-box-size);
-    right: -150%;
-    height: var(--secudary-box-size);
-  }
-}
-
-
-/* Movimientos a la derecha */
-@keyframes slideRight {
-  from {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: var(--main-box-size);
-    height: var(--main-box-size);
-  }
-
-  to {
-    transform: translate(150%, -50%);
-    width: var(--secudary-box-size);
-    height: var(--secudary-box-size);
-    top: 50%;
-    left: 50%;
-  }
-}
-
-@keyframes slideRight2 {
-  0% {
-    /* transform: translate(150%, -50%);
-    width: 125px;
-    height: 125px;
-    top: 50%;
-    left: 50%; */
-  }
-
-  50%{
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-250%);
-    left: -100%;
-  }
-}
-
-@keyframes slideRight0 {
-  from {
-    /* transform: translate(-150%);
-    right: -150%; */
-  }
-
-  to {
-    right: 100%;
-    transform: translate(50%);
-    width: var(--main-box-size);
-    height: var(--main-box-size);
-  }
-}
-
-@keyframes floating {
-  0% {
-    /* transform: translateY(-5%); */
-  }
-
-  50% {
-    transform: translateY(2%);
-  }
-
-  100% {
-    /* transform: translateY(-5%); */
-  }
-}
-
-@keyframes floatingCarousel0 {
-  0% {
-
-  }
-
-  50% {
-    transform: translate(-150%, -2%);
-  }
-
-  100%{
-
-  }
-}
-@keyframes floatingCarousel {
-  0% {
-
-  }
-
-  50% {
-    transform: translate(-50%, -50%);
-  }
-
-  100%{
-
-  }
-}
-@keyframes floatingCarousel2 {
-  0% {
-
-  }
-
-  50% {
-    transform: translate(150%, 3%);
-  }
-
-  100%{
-
-  }
-}
+/**
+░█████╗░███╗░░██╗██╗███╗░░░███╗░█████╗░████████╗██╗░█████╗░███╗░░██╗░██████╗
+██╔══██╗████╗░██║██║████╗░████║██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝
+███████║██╔██╗██║██║██╔████╔██║███████║░░░██║░░░██║██║░░██║██╔██╗██║╚█████╗░
+██╔══██║██║╚████║██║██║╚██╔╝██║██╔══██║░░░██║░░░██║██║░░██║██║╚████║░╚═══██╗
+██║░░██║██║░╚███║██║██║░╚═╝░██║██║░░██║░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
+╚═╝░░╚═╝╚═╝░░╚══╝╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
+*/
 
 @keyframes motionTexture {
   0% {
@@ -554,5 +291,17 @@ img{
   }
   100% {
     background-size:cover;
+  }
+}
+
+@keyframes rotateCard {
+  0% {
+    transform: rotate3d(0, 1, 0, 30deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 60deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 100deg);
   }
 }

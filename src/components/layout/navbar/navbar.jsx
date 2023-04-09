@@ -19,7 +19,7 @@ const Navbar = (items) => {
                     // <a key={s.view} href={s.id} className={hash === s.id?'navBarCircle tooltipContainer': 'navBarCircleInactive tooltipContainer'} onClick={() => reloadNavbar(s.id)}>
                     //     <Tooltip text={[s, {url: hash, i: s.id}]}></Tooltip>
                     // </a>
-                    <a href={s.id}>
+                    <a key={s.id} href={s.id}>
                         {s.view}
                     </a>
                 )

@@ -63,8 +63,8 @@ export default function Skills() {
             <h2>Tecnologías</h2>
             <div className="itemsBox">
                 {skillList.map(s=> 
-                <div className="flex justify-center relative">
-                    {<SkillItem item={s}></SkillItem>}
+                <div key={s.name} className="flex justify-center relative">
+                    {<SkillItem  item={s}></SkillItem>}
                 </div>)
                 }
             </div>
