@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 const ProjectBox = (props) => {
     return(
         <div className={`w-64 h-64 sm:w-72 sm:h-72 darkBoxColor relative hover:scale-105 rounded-xl flex flex-col justify-between shadowBorder effectTrigger hover:border hover:border-cyan-600`}>
