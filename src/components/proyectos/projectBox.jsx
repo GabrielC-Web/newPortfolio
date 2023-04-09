@@ -1,15 +1,6 @@
 import { useState } from "react"
 
 const ProjectBox = (props) => {
-
-    const [flipped, setFlipped] = useState(true)
-
-    function clicked(id){
-        // if(flipped){
-        //     return
-        // }
-        setFlipped(!flipped)
-    }
     return(
         <div className={`w-64 h-64 sm:w-72 sm:h-72 darkBoxColor relative hover:scale-105 rounded-xl flex flex-col justify-between shadowBorder effectTrigger hover:border hover:border-cyan-600`}>
             <div className="absolute w-full h-full flex flex-col gap-y-6 p-4 start-[50%] translate-x-[-50%]">
