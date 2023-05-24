@@ -1,0 +1,17 @@
+/* Navbar */
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  gap: 20px;
+  padding: 20px;
+  /* width: fit-content; */
+  width: 100%;
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}

@@ -1,0 +1,137 @@
+@use '@angular/material' as mat;
+// @import '~@angular/material/theming';
+
+@include mat.core();
+
+// @mixin body-theme($theme) {
+//   $_background: map-get($theme, background);
+//   $app-background-color: mat-color($_background, background);
+
+//   body {
+//     background-color: $app-background-color;
+//   }
+// }
+
+$soft-dark: (
+    50 : #e7e7e7,
+    100 : #c2c2c2,
+    200 : #999999,
+    300 : #707070,
+    400 : #525252,
+    500 : #333333,
+    600 : #2e2e2e,
+    700 : #272727,
+    800 : #202020,
+    900 : #141414,
+    A100 : #ef6e6e,
+    A200 : #ea4040,
+    A400 : #f60000,
+    A700 : #dd0000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$light-theme: (
+    50 : #fffcf9,
+    100 : #fef7f0,
+    200 : #fef2e6,
+    300 : #fdeddc,
+    400 : #fce9d5,
+    500 : #fce5cd,
+    600 : #fce2c8,
+    700 : #fbdec1,
+    800 : #fbdaba,
+    900 : #fad3ae,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$my-primary: mat.define-palette($soft-dark, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0
+  )
+);
+
+$my-primary2: mat.define-palette($light-theme, 900);
+$my-accent2: mat.define-palette(mat.$purple-palette, A200, A100, A400);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn2: mat.define-palette(mat.$red-palette);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary2,
+      accent: $my-accent2,
+      warn: $my-warn2,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0
+  )
+);
+
+.dark-mode{
+  @include mat.all-component-colors($dark-theme);
+  // @include body-theme($dark-theme)
+
+  .mat-app-background{
+    background-color: #333;
+    transition: all ease 1s;
+  }
+}
+
+.light-mode{
+  @include mat.all-component-colors($light-theme);
+  .mat-app-background{
+    background-color: #fad3ae;
+    transition: all ease 1s;
+  }
+}
+
