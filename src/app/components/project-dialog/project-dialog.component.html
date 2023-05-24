@@ -1,0 +1,30 @@
+<!-- <section class="h-full relative">
+
+</section> -->
+<h3 matDialogTitle class="text-center mt-2">{{data.title}}</h3>
+<!-- Contenido principal -->
+<div matDialogContent class="flex flex-col sm:flex-row items-center sm:items-start justify-center w-full h-full m-0 py-2" style="display: flex;height: calc(100% - 102px);">
+  <div class="flex justify-center w-full sm:w-3/6" style="min-height: 200px;">
+    <img class="h-52" [src]="data.img"/>
+  </div>
+  <div class="w-full sm:w-3/6 px-3 h-full flex items-stretch flex-col justify-between" style="min-height: 200px;">
+    <p class="my-3">
+      {{data.description}}
+    </p>
+    <a *ngIf="data.zelda" class="break-all" href="{{data.zelda}}" target="_blank">
+      Para más información visita: <span class="text-cyan-600">{{data.zelda}}</span>
+    </a>
+  </div>
+
+</div>
+<!-- Acciones -->
+<div matDialogActions class="mat-flex-centered">
+
+  <button mat-button class="w-full" (click)="close()">
+    Cerrar
+  </button>
+
+  <!-- <button  mat-button>
+    Visitar
+  </button> -->
+</div>
