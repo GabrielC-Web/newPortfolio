@@ -3,24 +3,29 @@
 </section> -->
 <h3 matDialogTitle class="text-center mt-2">{{data.title}}</h3>
 <!-- Contenido principal -->
-<div matDialogContent class="flex flex-col sm:flex-row items-center sm:items-start justify-center w-full h-full m-0 py-2" style="display: flex;height: calc(100% - 102px);">
-  <div class="flex justify-center w-full sm:w-3/6" style="min-height: 200px;">
-    <img class="h-52" [src]="data.img"/>
-  </div>
-  <div class="w-full sm:w-3/6 px-3 h-full flex items-stretch flex-col justify-between" style="min-height: 200px;">
-    <p class="my-3">
-      {{data.description}}
-    </p>
-    <a *ngIf="data.zelda" class="break-all" href="{{data.zelda}}" target="_blank">
-      Para más información visita: <span class="text-cyan-600">{{data.zelda}}</span>
-    </a>
+<div matDialogContent style="padding: 0 !important;">
+  <div class="flex flex-col sm:flex-row items-center justify-center w-full h-full m-0 py-8 px-4">
+    <!-- Imagen del diálogo -->
+    <div class="flex justify-center w-full sm:w-3/6 py-4" style="min-height: 200px;">
+      <img class="h-52" [src]="data.img"/>
+    </div>
+    <!-- Texto del diálogo, descripción -->
+    <div class="w-full sm:w-3/6 px-3 h-full flex p-0 flex-col justify-between" [ngClass]="data.zelda?'items-stretch justify-between':'items-center justify-center'">
+      <p class="my-3 text-justify	">
+        {{data.description}}
+      </p>
+      <!-- Enlace a otro sitio web, en caso de que haya -->
+      <a *ngIf="data.zelda" class="break-all mt-1" href="{{data.zelda}}" target="_blank">
+        Para más información visita: <span class="text-cyan-600">{{data.zelda}}</span>
+      </a>
+    </div>
   </div>
 
 </div>
 <!-- Acciones -->
 <div matDialogActions class="mat-flex-centered">
 
-  <button mat-button class="w-full" (click)="close()">
+  <button mat-button class="w-6/12" (click)="close()">
     Cerrar
   </button>
 
