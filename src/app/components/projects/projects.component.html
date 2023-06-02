@@ -2,7 +2,7 @@
   <h3>Proyectos</h3>
   <div class="grid gap-12 mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
     <!-- Caja de proyecto -->
-    <mat-card class="w-72 h-72 relative hover:scale-105 rounded-xl flex flex-col justify-between shadowBorder effectTrigger hover:border hover:border-cyan-600 shadow-border cursor-pointer" *ngFor="let project of projects" (click)="openDetail(project)">
+    <mat-card class="w-72 h-72 relative hover:scale-105 rounded-xl flex flex-col justify-between shadowBorder effectTrigger border-none hover:border hover:border-cyan-600 shadow-border cursor-pointer" *ngFor="let project of projects" (click)="openDetail(project)">
       <mat-card-header class="flex-centered">
         <mat-card-title>{{project.title}}</mat-card-title>
       </mat-card-header>

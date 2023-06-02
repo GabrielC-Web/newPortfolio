@@ -57,9 +57,9 @@ $light-theme: (
     700 : #fbdec1,
     800 : #fbdaba,
     900 : #fad3ae,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #ffffff,
+    A100 : #b80f0f,
+    A200 : #cb2020,
+    A400 : #b52020,
     A700 : #ffffff,
     contrast: (
         50 : #000000,
@@ -125,6 +125,15 @@ $light-theme: mat.define-light-theme(
     background-color: #333;
     transition: all ease 1s;
   }
+
+  .components-bg{
+    background-color: #000 !important;
+  }
+
+  .secondary-color{
+    color: #19E003;
+  }
+
 }
 
 .light-mode{
@@ -133,5 +142,14 @@ $light-theme: mat.define-light-theme(
     background-color: #fad3ae;
     transition: all ease 1s;
   }
+
+  .components-bg{
+    background-color: orange !important;
+  }
+
+  .secondary-color{
+    color: #19E003;
+  }
+
 }
 
