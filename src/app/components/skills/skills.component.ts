@@ -92,7 +92,8 @@ export class SkillsComponent {
       data: skill,
       // height: '400px',
       width: '700px',
-      maxWidth: '90vw'
+      maxWidth: '90vw',
+      restoreFocus: false
     })
   }
 

@@ -10,12 +10,17 @@ export class NavbarComponent {
   /**
    * Items a mostrar
    */
-  @Input() navItems: string[] = []
+  @Input() navItems: any[] = []
 
   /**
    * Tema de color seleccionado
    */
   @Output() themeSelected: EventEmitter<any> = new EventEmitter()
+
+  /**
+   * Id del item de navegación
+   */
+  itemId!: number | null
 
   themes: any[] = [
     {
@@ -40,6 +45,14 @@ export class NavbarComponent {
 
   setThemeColor(theme: any){
     this.themeSelected.emit(theme)
+  }
+
+  /**
+   * Cambia el valor del itemId, al item clickeado actualmente
+   * @param id id del item
+   */
+  storeId(id: number){
+    this.itemId = id
   }
 
 }

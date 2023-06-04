@@ -11,10 +11,10 @@ export class AppComponent {
   /**
    * Items para el navbar
    */
-  navItems: string[] = [
-    'Inicio',
-    'Proyectos',
-    'Tecnologías'
+  navItems: object[] = [
+    {url:'Inicio', id: 0},
+    {url:'Proyectos', id: 1},
+    {url:'Tecnologías', id: 2}
   ]
 
   /**

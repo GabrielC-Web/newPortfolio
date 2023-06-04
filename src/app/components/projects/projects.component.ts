@@ -43,7 +43,8 @@ export class ProjectsComponent {
       data: project,
       // height: '500px',
       width: '700px',
-      maxWidth: '90vw'
+      maxWidth: '90vw',
+      restoreFocus: false
     })
   }
 }

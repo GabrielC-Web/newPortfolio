@@ -1,13 +1,15 @@
 <nav class="flex justify-end navbar border-b border-angel-green">
-  <button mat-button *ngFor="let item of navItems">
-    <a href="#{{item}}">{{item}}</a>
-  </button>
+  <!-- Botones de navegación -->
+  <a class="border-b-2 border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
+    {{item.url}}
+  </a>
 
   <!--Selección de temas de color  -->
-  <button mat-icon-button color="accent" matTooltip="Selecciona Tema de color" [matMenuTriggerFor]="setTheme" class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>format_color_fill</mat-icon>
+  <button mat-icon-button matTooltip="Selecciona Tema de color" [matMenuTriggerFor]="setTheme" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon class="text-angel-green">format_color_fill</mat-icon>
   </button>
 
+  <!-- Menú interno de selección de color -->
   <mat-menu #setTheme="matMenu">
     <button mat-menu-item *ngFor="let item of themes" (click)="setThemeColor(item)">
       {{item.name}}
