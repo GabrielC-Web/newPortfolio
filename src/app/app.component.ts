@@ -14,7 +14,8 @@ export class AppComponent {
   navItems: object[] = [
     {url:'Inicio', id: 0},
     {url:'Proyectos', id: 1},
-    {url:'Tecnologías', id: 2}
+    {url:'Tecnologías', id: 2},
+    {url:'Contacto', id: 3},
   ]
 
   /**

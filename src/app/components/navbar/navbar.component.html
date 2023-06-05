@@ -1,6 +1,6 @@
 <nav class="flex justify-end navbar border-b border-angel-green">
   <!-- Botones de navegación -->
-  <a class="border-b-2 border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
+  <a class="border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
     {{item.url}}
   </a>
 

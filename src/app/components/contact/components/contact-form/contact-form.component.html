@@ -1,0 +1,17 @@
+<form class="flex flex-col w-full" [formGroup]="contactForm">
+  <mat-form-field color="accent" class="w-full p-2 field-size" appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" placeholder="Gabriel Carreño" formControlName="name">
+  </mat-form-field>
+  <mat-form-field color="accent" class="w-full p-2 field-size" appearance="outline">
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email">
+  </mat-form-field>
+  <mat-form-field color="accent" class="w-full p-2 field-size" appearance="outline">
+    <mat-label>Asunto</mat-label>
+    <input matInput type="text" placeholder="layout page" formControlName="subject">
+  </mat-form-field>
+</form>
+<button class="w-full border border-solid border-white hover:border-angel-green active:border-angel-green p-2 text-white rounded" (click)="onSubmit()">
+  Enviar
+</button>

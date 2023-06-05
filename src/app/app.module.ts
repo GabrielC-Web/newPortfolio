@@ -11,6 +11,8 @@ import { StartViewComponent } from './components/start-view/start-view.component
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectDialogComponent } from './components/project-dialog/project-dialog.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactFormComponent } from './components/contact/components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProjectDialogComponent } from './components/project-dialog/project-dial
     StartViewComponent,
     ProjectsComponent,
     SkillsComponent,
-    ProjectDialogComponent
+    ProjectDialogComponent,
+    ContactComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

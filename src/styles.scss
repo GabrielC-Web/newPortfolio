@@ -51,7 +51,11 @@
   }
 
   .flex-centered{
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
+  }
+
+  *, ::before, ::after {
+    border-style: none;
   }
 }
 
