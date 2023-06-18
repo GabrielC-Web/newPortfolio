@@ -1,5 +1,10 @@
 
-
 .shadow-border{
   box-shadow: 0 0 5px 5px rgb(0 0 0 / 12%) !important;
+}
+
+.cool-input{
+  background-color: transparent;
+  box-sizing: border-box;
+  outline: none;
 }

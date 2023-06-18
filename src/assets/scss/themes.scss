@@ -124,12 +124,12 @@ $secondary-color: #19E003;
   // @include body-theme($dark-theme)
 
   .mat-app-background{
-    background-color: #333;
+    background-color: #000000;
     transition: all ease 1s;
   }
 
   .components-bg{
-    background-color: #161515 !important;
+    background-color: #101011 !important;
   }
 
   .secondary-color{

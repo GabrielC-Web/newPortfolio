@@ -13,6 +13,9 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectDialogComponent } from './components/project-dialog/project-dialog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/contact/components/contact-form/contact-form.component';
+import { FormFieldComponent } from './reusable/form-field/form-field.component';
+import { InputDirective } from './directives/input.directive';
+import { LabelComponent } from './reusable/label/label.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ContactFormComponent } from './components/contact/components/contact-fo
     SkillsComponent,
     ProjectDialogComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FormFieldComponent,
+    InputDirective,
+    LabelComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+.cool-label{
+  position: absolute;
+  bottom: -6px;
+  left: 7px;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.cool-label:focus{
+  transform: translateY(-35px);
+}
+
+
