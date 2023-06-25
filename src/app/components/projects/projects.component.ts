@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog} from '@angular/material/dialog';
-import { PROJECT1 } from 'src/environments/constants';
+import { PROJECT1, PROJECT2, PROJECT3 } from 'src/environments/constants';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
 @Component({
@@ -21,13 +21,13 @@ export class ProjectsComponent {
       title: 'Aerodinámica de una vaca',
       id: 2,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis quis tenetur harum a maiores obcaecati illo in, eius nisi similique. Asperiores expedita illo aspernatur veniam doloremque facere id fugiat?',
-      img: PROJECT1
+      img: PROJECT2
     },
     {
       title: 'Cabras razonables',
       id: 3,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis quis tenetur harum a maiores obcaecati illo in, eius nisi similique. Asperiores expedita illo aspernatur veniam doloremque facere id fugiat?',
-      img: PROJECT1
+      img: PROJECT3
     },
   ]
 

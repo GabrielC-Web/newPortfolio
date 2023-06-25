@@ -1,5 +1,5 @@
 <nav class="flex flex-col sm:flex-row justify-end navbar border-b border-angel-green">
-  <div class="hidden sm:!flex">
+  <div class="flex">
     <!-- Botones de navegación -->
     <a class="border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
       {{item.url}}
@@ -7,7 +7,8 @@
 
     <!-- Selección de temas de color -->
     <button mat-icon-button matTooltip="Selecciona Tema de color" [matMenuTriggerFor]="setTheme" class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon class="text-angel-green">format_color_fill</mat-icon>
+      <!-- <mat-icon class="text-angel-green">format_color_fill</mat-icon> -->
+      <img src="assets/iconos/version_oscura/cambio_color_version_oscura.svg" alt="">
     </button>
 
     <!-- Menú interno de selección de color -->
@@ -20,30 +21,30 @@
 
   <!-- Menu alterno, pal responsive -->
   <!--Selección de temas de color  -->
-  <button mat-button class="w-full sm:!hidden" [matMenuTriggerFor]="responsive" >
+  <!-- <button mat-button class="w-full sm:!hidden" [matMenuTriggerFor]="responsive" >
     Opciones
   </button>
 
   <mat-menu #responsive="matMenu" class="w-full flex flex-col sm:!hidden">
-    <!-- Botones de navegación -->
+    Botones de navegación
     <div mat-menu-item class="w-full" *ngFor="let item of navItems; let i = index">
       <a class="w-full border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' "  href="#{{item.url}}" (click)="storeId(item.id)">
         {{item.url}}
       </a>
     </div>
 
-    <!--Selección de temas de color  -->
+    Selección de temas de color
     <button mat-menu-item matTooltip="Selecciona Tema de color" class="w-full" [matMenuTriggerFor]="setTheme">
       <mat-icon class="text-angel-green">format_color_fill</mat-icon>
     </button>
   </mat-menu>
 
-  <!-- Menú interno de selección de color -->
+  Menú interno de selección de color
   <mat-menu #setTheme="matMenu" class="sm:!hidden w-full">
     <button mat-menu-item *ngFor="let item of themes" (click)="setThemeColor(item)">
       {{item.name}}
     </button>
-  </mat-menu>
+  </mat-menu> -->
 </nav>
 
 <!-- Horrible, se debe mejorar -->

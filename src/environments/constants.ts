@@ -12,4 +12,14 @@ export const GIT = "assets/technologies/git-svgrepo-com.svg"
 
 //Proyectos
 
-export const PROJECT1 = "assets/projects/laptop.jpg"
+export const PROJECT1 = "assets/iconos/version_oscura/icono-app_version_oscura.svg"
+export const PROJECT2 = "assets/iconos/version_oscura/icono-web_version_oscura.svg"
+export const PROJECT3 = "assets/iconos/version_oscura/icono-proyectos-personales_version_oscura.svg"
+
+
+//Redes sociales
+export const GMAIL1 = "assets/iconos/version_oscura/icono-correo_version_oscura.svg"
+export const GMAIL2 = "assets/iconos/version_oscura/icono-correo_hover_version_oscura.svg"
+export const GITHUB1 = "assets/iconos/version_oscura/github-version-oscura.svg"
+export const GITHUB2 = "assets/iconos/version_oscura/github-hover-version-oscura.svg"
+

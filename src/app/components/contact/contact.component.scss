@@ -1,0 +1,25 @@
+.itemsBox{
+  display: grid;
+  width: 80%;
+  margin-top: 3rem !important;
+  max-width: 755px !important;
+  margin: 0 auto;
+  grid-auto-rows: 80px;
+  align-content: center;
+  justify-content: center;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 2fr));
+}
+
+.technologyItem{
+  padding: 1.5rem;
+  cursor: pointer;
+  // background-color: #0F0F0F;
+  border-radius: 6px;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
