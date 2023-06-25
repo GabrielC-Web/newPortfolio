@@ -1,32 +1,20 @@
-<!-- <form class="flex justify-center flex-col w-full" [formGroup]="contactForm">
-  <h3 class="text-center">¡Contáctame!</h3>
-  <mat-form-field color="accent" class="w-full p-2 field-size" appearance="fill">
-    <mat-label>Nombre</mat-label>
-    <input matInput type="text" placeholder="Gabriel Carreño" formControlName="name">
-  </mat-form-field>
-  <mat-form-field color="accent" class="w-full p-2 field-size" appearance="fill">
-    <mat-label>Correo electrónico</mat-label>
-    <input matInput type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email">
-  </mat-form-field>
-  <mat-form-field color="accent" class="w-full p-2 field-size" appearance="fill">
-    <mat-label>Asunto</mat-label>
-    <input matInput type="text" placeholder="layout page" formControlName="subject">
-  </mat-form-field>
-</form>
-<button class="w-full border border-solid border-white hover:border-angel-green active:border-angel-green p-2 text-white rounded" (click)="onSubmit()">
-  Enviar
-</button> -->
-
-<form class="flex justify-center flex-col w-full"  [formGroup]="contactForm">
+<form class="flex justify-center flex-col w-full items-center p-0"  [formGroup]="contactForm">
   <h3 class="text-center">¡Contáctame!</h3>
 
-  <!-- Formcontrols -->
-  <cool-form-field>
-    <cool-label>Nombre</cool-label>
-    <input coolInput type="text" placeholder="Gabriel Carreño" formControlName="name">
-  </cool-form-field>
-  <cool-form-field>
-    <cool-label>Correo electrónico</cool-label>
-    <input coolInput type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email">
-  </cool-form-field>
+  <!-- Los formcontrols -->
+  <div class="form-field">
+    <label class="cool-label">
+      Nombre
+    </label>
+    <input class="p-0" coolInput type="text" placeholder="Gabriel Carreño" formControlName="name" style="padding: 0;">
+  </div>
+  <div class="form-field">
+    <label class="cool-label">
+      Correo electrónico
+    </label>
+    <input class="p-0" coolInput type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email" style="padding: 0;">
+  </div>
+  <button class="sm:w-4/12 w-6/12 border border-solid border-white mt-8 p-2 active:border-angel-green active:text-angel-green text-white rounded" (click)="onSubmit()">
+    Enviar
+  </button>
 </form>

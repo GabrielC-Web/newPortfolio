@@ -5,4 +5,28 @@ input::placeholder{
 
 input:focus::placeholder{
   color: white;
+  opacity: 0.5;
+}
+
+.form-field{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 8px 0 !important;
+}
+
+.cool-label{
+  // position: absolute;
+  // bottom: -6px;
+  // left: 7px;
+  // pointer-events: none;
+  // width: 100%;
+  // height: 100%;
+}
+
+
+.form-field:focus > .cool-label {
+  visibility: hidden;
 }

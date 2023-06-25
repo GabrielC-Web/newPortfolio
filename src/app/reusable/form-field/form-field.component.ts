@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { UtilitiesService } from '../services/utilities.service';
 
 @Component({
   selector: 'cool-form-field',
@@ -7,8 +8,17 @@ import { Component } from '@angular/core';
 })
 export class FormFieldComponent {
 
-  clickedField(){
+  @Input() clicked: boolean = false
 
+  constructor(
+    private utilities: UtilitiesService
+  ){
+
+  }
+
+  clickedField(){
+    // this.utilities.updateSignal(true)
+    this.clicked = true
   }
 
 }

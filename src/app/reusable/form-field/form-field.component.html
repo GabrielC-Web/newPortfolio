@@ -1,4 +1,4 @@
-<div class="custom-form-field my-2 relative" (click)="clickedField()">
-  <ng-content class="flex justify-center flex-col field-container">
+<div class="custom-form-field my-2 relative" (click)="clicked = true" (blur)="clicked = false">
+  <ng-content class="flex justify-center flex-col field-container" [clicked]="clicked">
   </ng-content>
 </div>
