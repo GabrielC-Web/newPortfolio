@@ -7,7 +7,7 @@
   <div class="flex flex-col sm:flex-row items-center justify-center w-full h-full m-0 py-8 px-4">
     <!-- Imagen del diálogo -->
     <div class="flex justify-center w-full sm:w-3/6 py-4" style="min-height: 200px;">
-      <img class="h-52" [src]="data.img"/>
+      <img class="h-52" [src]="theme.name == 'Light'? data.imgLight:data.imgDark"/>
     </div>
     <!-- Texto del diálogo, descripción -->
     <div class="w-full sm:w-3/6 px-3 h-full flex p-0 flex-col justify-between" [ngClass]="data.zelda?'items-stretch justify-between':'items-center justify-center'">
@@ -25,7 +25,7 @@
 <!-- Acciones -->
 <div matDialogActions class="mat-flex-centered">
 
-  <button class="w-6/12 border border-solid border-white focus:border-angel-green text-white rounded p-2" (click)="close()">
+  <button class="w-6/12 border border-solid focus:border-angel-green rounded p-2" [ngClass]="theme.classBorder + theme.textContrastColor" (click)="close()">
     Cerrar
   </button>
 

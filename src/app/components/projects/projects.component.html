@@ -9,11 +9,11 @@
         </mat-card-header>
         <!-- Imagen descriptiva -->
         <mat-card-content class="p-0 my-4 h-2/4">
-          <img class="w-full h-full" mat-card-image [src]="project.img" alt="Photo of a Shiba Inu">
+          <img class="w-full h-full" mat-card-image [src]="theme.name == 'Light'? project.imgLight:project.imgDark" alt="Photo of a Shiba Inu">
         </mat-card-content>
         <!-- Botón -->
         <mat-card-actions class="flex-centered">
-          <button class="w-full border border-solid border-transparent p-2 focus:border-angel-green text-white rounded">Ver más</button>
+          <button class="w-full border border-solid border-transparent p-2 focus:border-angel-green rounded" [ngClass]="theme.textContrastColor">Ver más</button>
         </mat-card-actions>
       </div>
     </mat-card>

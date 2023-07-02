@@ -14,7 +14,7 @@
     </label>
     <input class="p-0" coolInput type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email" style="padding: 0;">
   </div>
-  <button class="sm:w-4/12 w-6/12 border border-solid border-white mt-8 p-2 active:border-angel-green active:text-angel-green text-white rounded" (click)="onSubmit()">
+  <button [ngClass]="theme.classBorder + '' + theme.textContrastColor" class="sm:w-4/12 w-6/12 border border-solid mt-8 p-2 active:border-angel-green active:text-angel-green rounded"  (click)="onSubmit()">
     Enviar
   </button>
 </form>

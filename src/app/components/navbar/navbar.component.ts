@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
+import { THEMES } from 'src/environments/constants';
 
 @Component({
   selector: 'cool-navbar',
@@ -22,20 +24,14 @@ export class NavbarComponent {
    */
   itemId!: number | null
 
-  themes: any[] = [
-    {
-      color: '#333333',
-      name: 'Soft Dark',
-      class: 'dark-mode'
-    },
-    {
-      color: '#333333',
-      name: 'Light',
-      class: 'light-mode'
-    },
-  ]
+  /**
+   * Temas de color de la página
+   */
+  themes: any[] = THEMES
 
-  constructor(){
+  constructor(
+    private utilities: UtilitiesService
+  ){
 
   }
 
@@ -43,8 +39,15 @@ export class NavbarComponent {
 
   }
 
+  /**
+   * Setea el tema de color
+   * @param theme
+   */
   setThemeColor(theme: any){
     this.themeSelected.emit(theme)
+    this.utilities.updateSignal(theme)
+
+    sessionStorage.setItem('theme-color', JSON.stringify(theme))
   }
 
   /**
