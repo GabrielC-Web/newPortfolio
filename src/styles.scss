@@ -54,6 +54,30 @@
     @apply flex items-center justify-center;
   }
 
+  h1 {
+    @apply custom-text-color;
+  }
+
+  h2 {
+    @apply custom-text-color;
+  }
+
+  h3 {
+    @apply custom-text-color;
+  }
+
+  h4 {
+    @apply custom-text-color;
+  }
+
+  a {
+    @apply custom-text-color;
+  }
+
+  button {
+    @apply custom-text-color;
+  }
+
   *, ::before, ::after {
     border-style: none;
   }

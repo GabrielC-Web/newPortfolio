@@ -12,7 +12,7 @@
 //   }
 // }
 
-$soft-dark: (
+$real-dark: (
     50 : #e7e7e7,
     100 : #c2c2c2,
     200 : #999999,
@@ -46,20 +46,21 @@ $soft-dark: (
 );
 
 
+/* For use in src/lib/core/theming/_palette.scss */
 $light-theme: (
-    50 : #fffcf9,
-    100 : #fef7f0,
-    200 : #fef2e6,
-    300 : #fdeddc,
-    400 : #fce9d5,
-    500 : #fce5cd,
-    600 : #fce2c8,
-    700 : #fbdec1,
-    800 : #fbdaba,
-    900 : #fad3ae,
-    A100 : #b80f0f,
-    A200 : #cb2020,
-    A400 : #b52020,
+    50 : #fdfefe,
+    100 : #fbfcfc,
+    200 : #f9fafa,
+    300 : #f6f7f7,
+    400 : #f4f6f6,
+    500 : #f2f4f4,
+    600 : #f0f3f3,
+    700 : #eef1f1,
+    800 : #ecefef,
+    900 : #303030 ,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
     A700 : #ffffff,
     contrast: (
         50 : #000000,
@@ -81,8 +82,10 @@ $light-theme: (
 
 
 
-$my-primary: mat.define-palette($soft-dark, 500);
-$my-accent: mat.define-palette($soft-dark, A200, A100, A400);
+
+
+$my-primary: mat.define-palette($real-dark, 500);
+$my-accent: mat.define-palette($real-dark, A200, A100, A400);
 
 // The "warn" palette is optional and defaults to red if not specified.
 $my-warn: mat.define-palette(mat.$red-palette);
@@ -136,21 +139,29 @@ $secondary-color: #19E003;
     color: $secondary-color;
   }
 
+  .custom-text-color {
+    color: #FFFFFF !important;
+  }
+
 }
 
 .light-mode{
   @include mat.all-component-colors($light-theme);
   .mat-app-background{
-    background-color: #fad3ae;
+    background-color: #F2F4F4;
     transition: all ease 1s;
   }
 
   .components-bg{
-    background-color: orange !important;
+    background-color: #E8E8E8 !important;
   }
 
   .secondary-color{
     color: $secondary-color;
+  }
+
+  .custom-text-color {
+    color: #303030 !important;
   }
 
 
