@@ -35,8 +35,8 @@ export class ContactFormComponent {
 
   setForm(){
     this.contactForm = this.fb.group({
-      name: [''],
-      email: ['', [Validators.email]],
+      name: ['', Validators.required],
+      email: ['', [Validators.email, Validators.required]],
       subject: [''],
     })
   }
@@ -55,6 +55,8 @@ export class ContactFormComponent {
       next: updatedTheme => {
         theme = updatedTheme
         this.theme = theme
+        console.log(theme);
+
       }
     })
   }

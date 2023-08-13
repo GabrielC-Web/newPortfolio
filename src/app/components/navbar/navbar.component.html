@@ -1,9 +1,23 @@
 <nav class="flex flex-col sm:flex-row justify-end navbar border-b border-angel-green">
-  <div class="flex">
-    <!-- Botones de navegación -->
-    <a class="border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
+  <div class="flex flex-row w-full justify-end">
+    <!-- Botones de navegación (En tamaño de escritorio)-->
+    <a class="hidden sm:flex border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
       {{item.url}}
     </a>
+
+    <!-- Botones de navegación (responsive) -->
+
+    <button class="flex sm:!hidden" mat-icon-button [matMenuTriggerFor]="responsiveMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #responsiveMenu="matMenu">
+      <div class="flex flex-col">
+        <a class="border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
+          {{item.url}}
+        </a>
+      </div>
+    </mat-menu>
 
     <!-- Selección de temas de color -->
     <button mat-icon-button matTooltip="Selecciona Tema de color" [matMenuTriggerFor]="setTheme" class="example-icon" aria-label="Example icon-button with menu icon">
@@ -18,33 +32,4 @@
       </button>
     </mat-menu>
   </div>
-
-  <!-- Menu alterno, pal responsive -->
-  <!--Selección de temas de color  -->
-  <!-- <button mat-button class="w-full sm:!hidden" [matMenuTriggerFor]="responsive" >
-    Opciones
-  </button>
-
-  <mat-menu #responsive="matMenu" class="w-full flex flex-col sm:!hidden">
-    Botones de navegación
-    <div mat-menu-item class="w-full" *ngFor="let item of navItems; let i = index">
-      <a class="w-full border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' "  href="#{{item.url}}" (click)="storeId(item.id)">
-        {{item.url}}
-      </a>
-    </div>
-
-    Selección de temas de color
-    <button mat-menu-item matTooltip="Selecciona Tema de color" class="w-full" [matMenuTriggerFor]="setTheme">
-      <mat-icon class="text-angel-green">format_color_fill</mat-icon>
-    </button>
-  </mat-menu>
-
-  Menú interno de selección de color
-  <mat-menu #setTheme="matMenu" class="sm:!hidden w-full">
-    <button mat-menu-item *ngFor="let item of themes" (click)="setThemeColor(item)">
-      {{item.name}}
-    </button>
-  </mat-menu> -->
 </nav>
-
-<!-- Horrible, se debe mejorar -->

@@ -58,10 +58,10 @@ $light-theme: (
     700 : #eef1f1,
     800 : #ecefef,
     900 : #303030 ,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #ffffff,
-    A700 : #ffffff,
+    A100 : #19E003,
+    A200 : #19E003,
+    A400 : #19E003,
+    A700 : #19E003,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -73,10 +73,10 @@ $light-theme: (
         700 : #000000,
         800 : #000000,
         900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
+        A100 : #19E003,
+        A200 : #19E003,
+        A400 : #19E003,
+        A700 : #19E003,
     )
 );
 
@@ -98,12 +98,12 @@ $dark-theme: mat.define-dark-theme(
       warn: $my-warn,
     ),
     typography: mat.define-typography-config(),
-    density: 0
+    density: 3
   )
 );
 
 $my-primary2: mat.define-palette($light-theme, 900);
-$my-accent2: mat.define-palette(mat.$purple-palette, A200, A100, A400);
+$my-accent2: mat.define-palette($light-theme, A200, A100, A400);
 
 // The "warn" palette is optional and defaults to red if not specified.
 $my-warn2: mat.define-palette(mat.$red-palette);
@@ -116,7 +116,7 @@ $light-theme: mat.define-light-theme(
       warn: $my-warn2,
     ),
     typography: mat.define-typography-config(),
-    density: 0
+    density: 3
   )
 );
 
@@ -124,6 +124,7 @@ $secondary-color: #19E003;
 
 .dark-mode{
   @include mat.all-component-colors($dark-theme);
+  @include mat.form-field-density(-3);
   // @include body-theme($dark-theme)
 
   .mat-app-background{
@@ -147,6 +148,7 @@ $secondary-color: #19E003;
 
 .light-mode{
   @include mat.all-component-colors($light-theme);
+  @include mat.form-field-density(-3);
   .mat-app-background{
     background-color: #F2F4F4;
     transition: all ease 1s;
@@ -166,4 +168,5 @@ $secondary-color: #19E003;
 
 
 }
+
 
