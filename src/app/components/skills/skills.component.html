@@ -2,7 +2,7 @@
   <div class="itemsBox">
     <mat-card  matTooltip="{{skill.title}}" class="technologyItem !rounded-lg hover:scale-110 hover:border hover:border-angel-green shadow-border components-bg" *ngFor="let skill of skills" (click)="openDetail(skill)">
       <!-- <h4>{{skill.name}}</h4> -->
-      <img [src]="skill.img" alt="">
+      <img [src]="theme.name == 'Light'? skill.imgLight:skill.imgDark" alt="">
     </mat-card>
   </div>
 </section>

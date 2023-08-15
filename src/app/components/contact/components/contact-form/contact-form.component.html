@@ -1,20 +1,33 @@
 <form class="flex justify-center flex-col w-full items-center p-0"  [formGroup]="contactForm">
   <h3 class="text-center">¡Contáctame!</h3>
 
-  <!-- Los formcontrols -->
-  <div class="form-field">
-    <label class="cool-label">
-      Nombre
-    </label>
-    <input class="p-0" coolInput type="text" placeholder="Gabriel Carreño" formControlName="name" style="padding: 0;">
+  <div class="flex my-4 flex-col w-full gap-2">
+    <!-- Nombre -->
+    <mat-form-field color="accent" appearance="outline">
+      <mat-label color="accent">Nombre</mat-label>
+      <input matInput class="p-2" type="text" placeholder="Gabriel Carreño" formControlName="name">
+      <!-- Mensajes de error -->
+      <mat-error *ngIf="contactForm.controls['name'].errors?.['required']">
+        Debe escribir un nombre
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Correo -->
+    <mat-form-field color="accent" appearance="outline">
+      <mat-label color="accent">Correo electrónico</mat-label>
+      <input matInput class="p-2" type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email">
+      <!-- Mensajes de error -->
+      <mat-error *ngIf="contactForm.controls['email'].errors?.['required']">
+        Debe escribir un correo
+      </mat-error>
+      <mat-error *ngIf="contactForm.controls['email'].errors?.['email'] && !contactForm.controls['email'].errors?.['required']">
+        El correo ingresado no es válido
+      </mat-error>
+    </mat-form-field>
   </div>
-  <div class="form-field">
-    <label class="cool-label">
-      Correo electrónico
-    </label>
-    <input class="p-0" coolInput type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email" style="padding: 0;">
-  </div>
-  <button [ngClass]="theme.classBorder + '' + theme.textContrastColor" class="sm:w-4/12 w-6/12 border border-solid mt-8 p-2 active:border-angel-green active:text-angel-green rounded"  (click)="onSubmit()">
+
+  <!-- Botón de enviar -->
+  <button [ngClass]="theme.classBorder + ' ' + theme.textContrastColor" class="sm:w-6/12 w-6/12 border border-solid mt-8 p-2 active:border-angel-green active:text-angel-green rounded"  (click)="onSubmit()">
     Enviar
   </button>
 </form>

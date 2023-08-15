@@ -40,8 +40,8 @@ export const THEMES = [
     'contrast-color': '',
     name: 'Real Dark',
     class: 'dark-mode',
-    classBorder: 'border-[#101011]',
-    textContrastColor: 'text-[#fff]'
+    classBorder: ' !border-[#243c5a] ',
+    textContrastColor: ' !text-[#fff] '
   },
   {
     background: '#F2F4F4',
@@ -49,7 +49,7 @@ export const THEMES = [
     'contrast-color': '#303030',
     name: 'Light',
     class: 'light-mode',
-    classBorder: ' border-[#303030] ',
-    textContrastColor: ' text-[#303030] '
+    classBorder: ' !border-[#303030] ',
+    textContrastColor: ' !text-[#303030] '
   },
  ]
