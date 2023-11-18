@@ -19,6 +19,11 @@ export class ContactFormComponent {
    */
   theme: any
 
+  /**
+   * Contiene las clases del botón
+   */
+  buttonClass: string = ''
+
   // fb!: FormBuilder
 
   constructor(
@@ -51,11 +56,16 @@ export class ContactFormComponent {
   retrieveTheme(){
     let theme: any
 
+    //* Obtengo los valores actualizados del tema actual
     this.utilities.signal$.subscribe({
       next: updatedTheme => {
+
+        //*Seteo el tema
         theme = updatedTheme
         this.theme = theme
-        console.log(theme);
+
+        //*Seteo la clase del botón del form
+        this.buttonClass = this.theme.classBorder + ' ' + this.theme.textContrastColor
 
       }
     })
