@@ -1,35 +1,49 @@
 <nav class="flex flex-col sm:flex-row justify-end navbar border-b border-angel-green">
+
   <div class="flex flex-row w-full justify-end">
+
     <!-- Botones de navegación (En tamaño de escritorio)-->
-    <a class="hidden sm:flex border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
+    <a class="hidden sm:flex border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="item.url == currentScrollSection?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
       {{item.url}}
     </a>
 
     <!-- Botones de navegación (responsive) -->
 
     <button class="flex sm:!hidden" mat-icon-button [matMenuTriggerFor]="responsiveMenu">
+
       <mat-icon>more_vert</mat-icon>
+
     </button>
 
     <mat-menu #responsiveMenu="matMenu">
+
       <div class="flex flex-col">
-        <a class="border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="itemId == i?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
+
+        <a class="border-b-2 border-solid border-transparent hover:!border-angel-green p-2" [ngClass]="item.url == currentScrollSection?'!border-angel-green': '' " *ngFor="let item of navItems; let i = index" href="#{{item.url}}" (click)="storeId(item.id)">
           {{item.url}}
         </a>
+
       </div>
+
     </mat-menu>
 
     <!-- Selección de temas de color -->
     <button mat-icon-button matTooltip="Selecciona Tema de color" [matMenuTriggerFor]="setTheme" class="example-icon" aria-label="Example icon-button with menu icon">
+
       <!-- <mat-icon class="text-angel-green">format_color_fill</mat-icon> -->
       <img src="assets/iconos/version_oscura/cambio_color_version_oscura.svg" alt="">
+
     </button>
 
     <!-- Menú interno de selección de color -->
     <mat-menu #setTheme="matMenu">
+
       <button mat-menu-item *ngFor="let item of themes" (click)="setThemeColor(item)">
         {{item.name}}
       </button>
+
     </mat-menu>
+
   </div>
+
 </nav>
