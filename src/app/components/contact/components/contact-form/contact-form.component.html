@@ -30,7 +30,7 @@
   </div>
 
   <!-- Botón de enviar -->
-  <button [ngClass]="buttonClass" class="sm:w-6/12 w-6/12 border border-solid mt-8 p-2 active:!border-angel-green active:!text-angel-green rounded"  (click)="onSubmit()">
+  <button [ngClass]="theme.name == 'Light'? ' border border-solid !border-[#303030] ':' !border !border-solid !border-[#fff] '" class="sm:w-6/12 w-6/12 border border-solid mt-8 p-2 active:!border-angel-green active:!text-angel-green rounded"  (click)="onSubmit()">
     Enviar
   </button>
 

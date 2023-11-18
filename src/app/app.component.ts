@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { THEMES } from 'src/environments/constants';
+import { THEMES, VERSION } from 'src/environments/constants';
 import { UtilitiesService } from './reusable/services/utilities.service';
 
 @Component({
@@ -12,6 +12,11 @@ export class AppComponent {
    * Título del proyecto
    */
   title = 'gabriel-flex-room';
+
+  /**
+   * Versión actual del proyecto
+   */
+  version = VERSION
 
   /**
    * Items para el navbar
