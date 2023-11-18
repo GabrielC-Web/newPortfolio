@@ -15,6 +15,11 @@ export class NavbarComponent {
   @Input() navItems: any[] = []
 
   /**
+   * Indica en qué sección de scroll nos encontramos
+   */
+  @Input() currentScrollSection: string = ''
+
+  /**
    * Tema de color seleccionado
    */
   @Output() themeSelected: EventEmitter<any> = new EventEmitter()
