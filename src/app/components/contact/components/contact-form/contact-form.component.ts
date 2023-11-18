@@ -64,8 +64,11 @@ export class ContactFormComponent {
         theme = updatedTheme
         this.theme = theme
 
+        console.log(theme);
+
+
         //*Seteo la clase del botón del form
-        this.buttonClass = this.theme.classBorder + ' ' + this.theme.textContrastColor
+        this.buttonClass = this.theme.textContrastColor + ' ' +  this.theme.classBorder
 
       }
     })

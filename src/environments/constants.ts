@@ -1,3 +1,4 @@
+import packageJson from '../../package.json'
 
 // Habilidades
 export const HTML5 = "assets/technologies/html-5-svgrepo-com.svg"
@@ -40,8 +41,9 @@ export const THEMES = [
     'contrast-color': '',
     name: 'Real Dark',
     class: 'dark-mode',
-    classBorder: ' !border-[#243c5a] ',
-    textContrastColor: ' !text-[#fff] '
+    classBorder: ' !border !border-solid !border-[#fff] ',
+    textContrastColor: ' !text-[#fff] ',
+    buttonClass: ' !border !border-solid !border-[#fff] !text-[#fff] '
   },
   {
     background: '#F2F4F4',
@@ -49,7 +51,13 @@ export const THEMES = [
     'contrast-color': '#303030',
     name: 'Light',
     class: 'light-mode',
-    classBorder: ' !border-[#303030] ',
-    textContrastColor: ' !text-[#303030] '
+    classBorder: ' !border !border-solid !border-[#303030] ',
+    textContrastColor: ' !text-[#303030] ',
+    buttonClass: ' !border !border-solid !border-[#303030] !text-[#303030] '
   },
  ]
+
+/**
+ * Versión del proyecto
+ */
+export const VERSION = packageJson.version
