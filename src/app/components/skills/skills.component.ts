@@ -113,7 +113,10 @@ export class SkillsComponent {
       // height: '400px',
       width: '700px',
       maxWidth: '90vw',
-      restoreFocus: false
+      height: 'fit-content',
+      maxHeight: '600px',
+      restoreFocus: false,
+      autoFocus: false
     })
   }
 
