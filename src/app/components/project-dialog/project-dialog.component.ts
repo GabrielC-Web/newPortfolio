@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ProjectModel } from 'src/app/models/general.model';
 import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
 
 @Component({
@@ -22,7 +23,7 @@ export class ProjectDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<ProjectDialogComponent>,
     private utilities: UtilitiesService,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: ProjectModel,
   ) {}
 
 
