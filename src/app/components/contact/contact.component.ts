@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
 import { GITHUB1_DARK, GITHUB1_LIGHT, GITHUB2_DARK, GITHUB2_LIGHT, GMAIL1_DARK, GMAIL1_LIGHT, GMAIL2_DARK, GMAIL2_LIGHT } from 'src/environments/constants';
 
@@ -18,7 +19,7 @@ export class ContactComponent {
       img2Light: GMAIL2_LIGHT,
       position: 1,
       id: 0,
-      zelda: 'https://developer.mozilla.org/es/docs/Web/HTML'
+      zelda: 'https://mail.google.com/mail/u/0/#inbox?compose=new'
     },
     {
       title: 'Github',
@@ -28,7 +29,7 @@ export class ContactComponent {
       img2Light: GITHUB2_LIGHT,
       position: 1,
       id: 1,
-      zelda: 'https://developer.mozilla.org/es/docs/Web/HTML'
+      zelda: 'https://github.com/GabrielC-Web'
     }
   ]
 
@@ -46,11 +47,11 @@ export class ContactComponent {
 
   constructor(
     private utilities: UtilitiesService
-  ){
+  ) {
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.retrieveTheme()
   }
 
@@ -58,14 +59,14 @@ export class ContactComponent {
    * Cambia la imagen de la red social
    * @param id
    */
-  storeId(id: number){
+  storeId(id: number) {
     this.networkId = id
   }
 
-   /**
-   * Obtiene el tema de color almacenado
-   */
-   retrieveTheme(){
+  /**
+  * Obtiene el tema de color almacenado
+  */
+  retrieveTheme() {
     let theme: any
 
     this.utilities.signal$.subscribe({
@@ -74,6 +75,16 @@ export class ContactComponent {
         this.theme = theme
       }
     })
+  }
+
+  /**
+   * Me lleva al sitio web
+   * @param route 
+   */
+  navigate(route: string) {
+
+    window.open(route, '_blank');
+
   }
 
 }
