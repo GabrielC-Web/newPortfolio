@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectModel } from 'src/app/models/general.model';
 import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
-import { PROJECT1_DARK, PROJECT1_LIGHT } from 'src/environments/constants';
+import { PROJECT1_DARK, PROJECT1_LIGHT, PROJECT2_DARK, PROJECT2_LIGHT, PROJECT_MINIATURES } from 'src/environments/constants';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
 @Component({
@@ -26,6 +26,14 @@ export class ProjectsComponent {
       imgLight: PROJECT1_LIGHT,
       zelda: 'https://gabrielc-web.github.io/pugberto_music_analyzer/'
     },
+    {
+      title: 'Tienda de ropa online',
+      id: 1,
+      description: 'Plantilla para sitio web ecommerce de venta de ropa.',
+      imgDark: PROJECT_MINIATURES.ECOMMERCE,
+      imgLight: PROJECT_MINIATURES.ECOMMERCE,
+      zelda: 'https://gabrielc-web.github.io/clothes-store-template'
+    },
     // {
     //   title: 'Aerodinámica de una vaca',
     //   id: 2,
@@ -47,15 +55,15 @@ export class ProjectsComponent {
   constructor(
     private dialog: MatDialog,
     private utilities: UtilitiesService,
-  ){
+  ) {
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.retrieveTheme()
   }
 
-  openDetail(project: any): void{
+  openDetail(project: any): void {
     const dialogRef = this.dialog.open(ProjectDialogComponent, {
       data: project,
       // height: '500px',
@@ -71,7 +79,7 @@ export class ProjectsComponent {
   /**
    * Obtiene el tema de color almacenado
    */
-  retrieveTheme(){
+  retrieveTheme() {
     let theme: any
 
     this.utilities.signal$.subscribe({

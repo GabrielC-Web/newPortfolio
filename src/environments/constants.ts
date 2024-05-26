@@ -21,6 +21,9 @@ export const PROJECT1_LIGHT = "assets/iconos/version_clara/icono-app_version_cla
 export const PROJECT2_LIGHT = "assets/iconos/version_clara/icono-web_version_clara.svg"
 export const PROJECT3_LIGHT = "assets/iconos/version_clara/icono-proyectos-personales_version_clara.svg"
 
+export const PROJECT_MINIATURES = {
+  ECOMMERCE: 'assets/projects/clothes_ecommerce.png'
+}
 
 //Redes sociales
 export const GMAIL1_DARK = "assets/iconos/version_oscura/icono-correo_version_oscura.svg"
@@ -55,7 +58,7 @@ export const THEMES = [
     textContrastColor: ' !text-[#303030] ',
     buttonClass: ' !border !border-solid !border-[#303030] !text-[#303030] '
   },
- ]
+]
 
 /**
  * Versión del proyecto
