@@ -71,6 +71,7 @@ export class ProjectsComponent {
       maxWidth: '90vw',
       height: 'fit-content',
       maxHeight: '600px',
+      minHeight: '350px',
       restoreFocus: false,
       autoFocus: false
     })
