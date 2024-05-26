@@ -9,5 +9,6 @@ export interface ProjectModel {
   description: string,
   imgDark: string,
   imgLight: string,
-  zelda: string
+  zelda: string,
+  imageClass?: string
 }

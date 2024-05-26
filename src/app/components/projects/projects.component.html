@@ -4,21 +4,26 @@
     <mat-card
       class="w-72 h-72 relative hover:scale-105 !rounded-lg flex flex-col justify-center shadowBorder effectTrigger border-none hover:border hover:border-angel-green shadow-border cursor-pointer components-bg"
       *ngFor="let project of projects" (click)="openDetail(project)">
+
       <div class="h-5/6 flex items-center justify-center flex-col">
+
         <!-- Título de proyecto -->
         <mat-card-header class="flex-centered">
           <mat-card-title>{{project.title}}</mat-card-title>
         </mat-card-header>
+
         <!-- Imagen descriptiva -->
-        <mat-card-content class="p-0 w-5/6 my-4 h-2/4">
+        <mat-card-content class="p-0 w-5/6 my-4 h-2/4" [ngClass]="project.imageClass">
           <img class="w-full h-full" mat-card-image [src]="theme.name == 'Light'? project.imgLight:project.imgDark"
             alt="">
         </mat-card-content>
+
         <!-- Botón -->
         <mat-card-actions class="flex-centered">
           <button class="w-full border border-solid border-transparent p-2 focus:border-angel-green rounded"
             [ngClass]="theme.textContrastColor">Ver más</button>
         </mat-card-actions>
+
       </div>
     </mat-card>
   </div>

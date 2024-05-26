@@ -22,9 +22,10 @@ export class ProjectsComponent {
       title: 'Pugberto dancing music analyser',
       id: 1,
       description: 'Este programa te permite reproducir música para obtener un feedback del ritmo de manera divertida y original.',
-      imgDark: PROJECT1_DARK,
-      imgLight: PROJECT1_LIGHT,
-      zelda: 'https://gabrielc-web.github.io/pugberto_music_analyzer/'
+      imgDark: PROJECT_MINIATURES.PUGBERTO,
+      imgLight: PROJECT_MINIATURES.PUGBERTO,
+      zelda: 'https://gabrielc-web.github.io/pugberto_music_analyzer/',
+      imageClass: '!w-full  max-w-[100px] !h-28'
     },
     {
       title: 'Tienda de ropa online',
