@@ -35,22 +35,22 @@ export class ProjectsComponent {
       imgLight: PROJECT_MINIATURES.ECOMMERCE,
       zelda: 'https://gabrielc-web.github.io/clothes-store-template'
     },
-    // {
-    //   title: 'Tienda de maquillaje online',
-    //   id: 3,
-    //   description: 'Plantilla para sitio web ecommerce de venta de maquillaje.',
-    //   imgDark: PROJECT_MINIATURES.ECOMMERCE,
-    //   imgLight: PROJECT_MINIATURES.ECOMMERCE,
-    //   zelda: 'https://gabrielc-web.github.io/makeup-store-template'
-    // },
-    // {
-    //   title: 'Tienda de libros online',
-    //   id: 3,
-    //   description: 'Plantilla para sitio web ecommerce de venta de libros.',
-    //   imgDark: PROJECT_MINIATURES.ECOMMERCE,
-    //   imgLight: PROJECT_MINIATURES.ECOMMERCE,
-    //   zelda: 'https://gabrielc-web.github.io/books-store-template'
-    // },
+    {
+      title: 'Tienda de maquillaje online',
+      id: 3,
+      description: 'Plantilla para sitio web ecommerce de venta de maquillaje.',
+      imgDark: PROJECT_MINIATURES.MAKEUP,
+      imgLight: PROJECT_MINIATURES.MAKEUP,
+      zelda: 'https://gabrielc-web.github.io/makeup-store-template'
+    },
+    {
+      title: 'Tienda de libros online',
+      id: 3,
+      description: 'Plantilla para sitio web ecommerce de venta de libros.',
+      imgDark: PROJECT_MINIATURES.BOOKS,
+      imgLight: PROJECT_MINIATURES.BOOKS,
+      zelda: 'https://gabrielc-web.github.io/books-store-template'
+    },
     // {
     //   title: 'Aerodinámica de una vaca',
     //   id: 2,

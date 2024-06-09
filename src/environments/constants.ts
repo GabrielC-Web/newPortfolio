@@ -23,7 +23,9 @@ export const PROJECT3_LIGHT = "assets/iconos/version_clara/icono-proyectos-perso
 
 export const PROJECT_MINIATURES = {
   ECOMMERCE: 'assets/projects/clothes_ecommerce.png',
-  PUGBERTO: 'assets/projects/pugberto_music_analyser.png'
+  PUGBERTO: 'assets/projects/pugberto_music_analyser.png',
+  MAKEUP: 'assets/projects/makeup_ecommerce.png',
+  BOOKS: 'assets/projects/books_ecommerce.png',
 }
 
 //Redes sociales
