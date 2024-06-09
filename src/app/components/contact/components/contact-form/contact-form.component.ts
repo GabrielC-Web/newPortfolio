@@ -29,31 +29,41 @@ export class ContactFormComponent {
   constructor(
     private fb: FormBuilder,
     private utilities: UtilitiesService,
-  ){
+  ) {
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.retrieveTheme()
     this.setForm()
   }
 
-  setForm(){
+  setForm() {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
-      subject: [''],
+      subject: ['', Validators.required],
     })
   }
 
-  onSubmit(){
-    // console.log(this.contactForm.value);
+  onSubmit() {
+
+    if (this.contactForm.valid) {
+
+      let a = document.createElement('a')
+
+      a.href = 'mailto:gabrieljose.cz21@gmail.com'
+
+      a.click()
+
+    }
+
   }
 
   /**
    * Obtiene el tema de color almacenado
    */
-  retrieveTheme(){
+  retrieveTheme() {
     let theme: any
 
     //* Obtengo los valores actualizados del tema actual
@@ -64,11 +74,8 @@ export class ContactFormComponent {
         theme = updatedTheme
         this.theme = theme
 
-        console.log(theme);
-
-
         //*Seteo la clase del botón del form
-        this.buttonClass = this.theme.textContrastColor + ' ' +  this.theme.classBorder
+        this.buttonClass = this.theme.textContrastColor + ' ' + this.theme.classBorder
 
       }
     })

@@ -23,7 +23,7 @@
     <mat-form-field color="accent" appearance="outline">
 
       <mat-label color="accent">Correo electrónico</mat-label>
-      <input matInput class="p-2" type="text" placeholder="gabrieljose.cz21@gmail.com" formControlName="email">
+      <input matInput class="p-2" type="text" placeholder="mail_example@gmail.com" formControlName="email">
 
       <!-- Mensajes de error -->
       <mat-error *ngIf="contactForm.controls['email'].errors?.['required']">
@@ -33,6 +33,19 @@
       <mat-error
         *ngIf="contactForm.controls['email'].errors?.['email'] && !contactForm.controls['email'].errors?.['required']">
         El correo ingresado no es válido
+      </mat-error>
+
+    </mat-form-field>
+
+    <!-- Correo -->
+    <mat-form-field color="accent" appearance="outline">
+
+      <mat-label color="accent">Asunto</mat-label>
+      <textarea matInput class="p-2" placeholder="mail_example@gmail.com" formControlName="subject"></textarea>
+
+      <!-- Mensajes de error -->
+      <mat-error *ngIf="contactForm.controls['subject'].errors?.['required']">
+        Debe escribir un mensaje
       </mat-error>
 
     </mat-form-field>
