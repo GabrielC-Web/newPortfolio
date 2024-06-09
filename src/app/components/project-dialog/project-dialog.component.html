@@ -23,8 +23,9 @@
           {{data.description}}
         </p>
         <!-- Enlace a otro sitio web, en caso de que haya -->
-        <a *ngIf="data.zelda" class="break-all mt-1" href="{{data.zelda}}" target="_blank">
-          Mira más aquí: <span class="text-cyan-600">{{data.zelda}}</span>
+        <a *ngIf="data.zelda" class="break-all mt-1" href="{{data.zelda}}" target="_blank" style="font-weight: 600">
+          <span>Mira esto 😎: </span>
+          <span class="text-cyan-600">{{data.zelda}}</span>
         </a>
       </div>
     </div>
