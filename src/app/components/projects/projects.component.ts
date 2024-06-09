@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectModel } from 'src/app/models/general.model';
 import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
-import { PROJECT1_DARK, PROJECT1_LIGHT, PROJECT2_DARK, PROJECT2_LIGHT, PROJECT_MINIATURES } from 'src/environments/constants';
+import { PROJECT_MINIATURES } from 'src/environments/constants';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
 @Component({
@@ -29,12 +29,28 @@ export class ProjectsComponent {
     },
     {
       title: 'Tienda de ropa online',
-      id: 1,
+      id: 2,
       description: 'Plantilla para sitio web ecommerce de venta de ropa.',
       imgDark: PROJECT_MINIATURES.ECOMMERCE,
       imgLight: PROJECT_MINIATURES.ECOMMERCE,
       zelda: 'https://gabrielc-web.github.io/clothes-store-template'
     },
+    // {
+    //   title: 'Tienda de maquillaje online',
+    //   id: 3,
+    //   description: 'Plantilla para sitio web ecommerce de venta de maquillaje.',
+    //   imgDark: PROJECT_MINIATURES.ECOMMERCE,
+    //   imgLight: PROJECT_MINIATURES.ECOMMERCE,
+    //   zelda: 'https://gabrielc-web.github.io/makeup-store-template'
+    // },
+    // {
+    //   title: 'Tienda de libros online',
+    //   id: 3,
+    //   description: 'Plantilla para sitio web ecommerce de venta de libros.',
+    //   imgDark: PROJECT_MINIATURES.ECOMMERCE,
+    //   imgLight: PROJECT_MINIATURES.ECOMMERCE,
+    //   zelda: 'https://gabrielc-web.github.io/books-store-template'
+    // },
     // {
     //   title: 'Aerodinámica de una vaca',
     //   id: 2,
