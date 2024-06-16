@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ANGULAR, BOOTSTRAP, CSSIMG, GIT, HTML5, JAVASCRIPT, REACT, TAILWIND, TYPESCRIPT } from 'src/environments/constants';
+import { ANGULAR, BOOTSTRAP, CSSIMG, FLUTTER, GIT, HTML5, JAVASCRIPT, REACT, TAILWIND, TYPESCRIPT } from 'src/environments/constants';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
 
@@ -80,6 +80,14 @@ export class SkillsComponent {
       position: 5,
       description: 'Angular es un framework de ingeniería de software de código abierto mantenido por Google, que sirve para desarrollar aplicaciones web de estilo Single Page Application (SPA) y Progressive Web App (PWA). Sirve tanto para versiones móviles como de escritorio.',
       zelda: 'https://angular.io/'
+    },
+    {
+      title: 'Flutter',
+      imgDark: FLUTTER,
+      imgLight: FLUTTER,
+      position: 5,
+      description: 'Flutter es un SDK de código fuente abierto de desarrollo de aplicaciones móviles creado por Google. Suele usarse para desarrollar interfaces de usuario para aplicaciones en Android, iOS y Web.',
+      zelda: 'https://flutter.dev/'
     },
     {
       title: 'Git',

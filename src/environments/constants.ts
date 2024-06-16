@@ -10,6 +10,7 @@ export const TYPESCRIPT = "assets/technologies/typescript-svgrepo-com.svg"
 export const REACT = "assets/technologies/react-svgrepo-com.svg"
 export const ANGULAR = "assets/technologies/angular-svgrepo-com.svg"
 export const GIT = "assets/technologies/git-svgrepo-com.svg"
+export const FLUTTER = "assets/technologies/flutter-svgrepo-com.svg"
 
 //Proyectos
 
