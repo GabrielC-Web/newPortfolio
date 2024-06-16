@@ -26,6 +26,7 @@ export const PROJECT_MINIATURES = {
   PUGBERTO: 'assets/projects/pugberto_music_analyser.png',
   MAKEUP: 'assets/projects/makeup_ecommerce.png',
   BOOKS: 'assets/projects/books_ecommerce.png',
+  CALCULATOR: 'assets/projects/calculator_flutter.png',
 }
 
 //Redes sociales

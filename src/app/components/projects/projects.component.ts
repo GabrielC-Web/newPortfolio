@@ -51,6 +51,14 @@ export class ProjectsComponent {
       imgLight: PROJECT_MINIATURES.BOOKS,
       zelda: 'https://gabrielc-web.github.io/books-store-template'
     },
+    {
+      title: 'Calculadora en flutter',
+      id: 3,
+      description: 'Calculadora para Android hecha con flutter',
+      imgDark: PROJECT_MINIATURES.CALCULATOR,
+      imgLight: PROJECT_MINIATURES.CALCULATOR,
+      zelda: 'https://www.upload-apk.com/en/nPMerpWitFebzZw'
+    },
     // {
     //   title: 'Aerodinámica de una vaca',
     //   id: 2,
