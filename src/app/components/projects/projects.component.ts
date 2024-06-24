@@ -59,6 +59,14 @@ export class ProjectsComponent {
       imgLight: PROJECT_MINIATURES.CALCULATOR,
       zelda: 'https://www.upload-apk.com/en/nPMerpWitFebzZw'
     },
+    {
+      title: 'Super Tic Tac Toe!',
+      id: 3,
+      description: 'Un juego de Tic Tac Toe, pero con una pequeña complejidad añadida',
+      imgDark: PROJECT_MINIATURES.TIC_TAC_TOE,
+      imgLight: PROJECT_MINIATURES.TIC_TAC_TOE,
+      zelda: 'https://gabrielc-web.github.io/super-tic-tac-toe/'
+    },
     // {
     //   title: 'Aerodinámica de una vaca',
     //   id: 2,

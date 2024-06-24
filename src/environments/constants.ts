@@ -28,6 +28,7 @@ export const PROJECT_MINIATURES = {
   MAKEUP: 'assets/projects/makeup_ecommerce.png',
   BOOKS: 'assets/projects/books_ecommerce.png',
   CALCULATOR: 'assets/projects/calculator_flutter.png',
+  TIC_TAC_TOE: 'assets/projects/super_tic_tac_toe.png',
 }
 
 //Redes sociales
