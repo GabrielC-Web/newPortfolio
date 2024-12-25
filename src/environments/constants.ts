@@ -29,6 +29,7 @@ export const PROJECT_MINIATURES = {
   BOOKS: 'assets/projects/books_ecommerce.png',
   CALCULATOR: 'assets/projects/calculator_flutter.png',
   TIC_TAC_TOE: 'assets/projects/super_tic_tac_toe.png',
+  NEXTJS_DASHBOARD: 'assets/projects/nextjs_dashboard.png',
 }
 
 //Redes sociales

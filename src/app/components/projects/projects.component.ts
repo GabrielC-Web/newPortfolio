@@ -67,6 +67,14 @@ export class ProjectsComponent {
       imgLight: PROJECT_MINIATURES.TIC_TAC_TOE,
       zelda: 'https://gabrielc-web.github.io/super-tic-tac-toe/'
     },
+    {
+      title: 'Next.js Dashboard',
+      id: 3,
+      description: 'Una web de ejemplo con un dashboard sencillo y funcional hecho con Nextjs',
+      imgDark: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
+      imgLight: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
+      zelda: 'https://nextjs-dashboard-fugko06hu-gabriels-projects-823f8e01.vercel.app/'
+    },
     // {
     //   title: 'Aerodinámica de una vaca',
     //   id: 2,
