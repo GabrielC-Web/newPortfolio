@@ -73,7 +73,7 @@ export class ProjectsComponent {
       description: 'Una web de ejemplo con un dashboard sencillo y funcional hecho con Nextjs',
       imgDark: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
       imgLight: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
-      zelda: 'https://nextjs-dashboard-fugko06hu-gabriels-projects-823f8e01.vercel.app/'
+      zelda: 'https://nextjs-dashboard-zeta-three-94.vercel.app/'
     },
     // {
     //   title: 'Aerodinámica de una vaca',
