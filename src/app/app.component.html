@@ -1,14 +1,17 @@
 <main class="mat-app-background relative">
 
   <!-- Navbar -->
-  <cool-navbar [navItems]="navItems" [currentScrollSection]="currentScrollSection" (themeSelected)="applyTheme($event)"></cool-navbar>
+  <cool-navbar [navItems]="navItems" [currentScrollSection]="currentScrollSection"
+    (themeSelected)="applyTheme($event)"></cool-navbar>
 
   <!-- Contenido principal -->
   <div class="h-[calc(100vh - 4rem)]">
-    <cool-start-view id="Inicio" class="flex-centered container "></cool-start-view>
-    <cool-projects id="Proyectos" class="flex-centered container "></cool-projects>
-    <cool-skills id="Tecnologías" class="flex-centered container "></cool-skills>
-    <cool-contact id="Contacto" class="flex-centered container "></cool-contact>
+    <cool-start-view id="Inicio" class="flex-centered container-size "></cool-start-view>
+    <cool-description id="Descripcion"
+      class="flex-centered h-fit min-h-screen !max-w-[680px] mx-auto"></cool-description>
+    <cool-projects id="Proyectos" class="flex-centered container-size "></cool-projects>
+    <cool-skills id="Tecnologías" class="flex-centered container-size "></cool-skills>
+    <cool-contact id="Contacto" class="flex-centered container-size "></cool-contact>
   </div>
 
   <!-- Versión del proyecto -->

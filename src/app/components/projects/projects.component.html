@@ -10,7 +10,7 @@
         <!-- Imagen descriptiva -->
         <mat-card-content class="px-3 py-4 w-full h-72 max-h-72 min-h-72 !flex justify-center items-start"
           [ngClass]="project.imageClass">
-          <img class="h-auto max-h-full aspect-auto justify-self-center !rounded-lg" mat-card-image
+          <img loading="lazy" class="h-auto max-h-full aspect-auto justify-self-center !rounded-lg" mat-card-image
             [src]="theme.name == 'Light'? project.imgLight:project.imgDark" alt="">
         </mat-card-content>
 

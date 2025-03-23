@@ -11,7 +11,7 @@
       *ngFor="let network of socialNetworks; let i = index" (mouseover)="over = true; storeId(network.id)"
       (mouseleave)="over = false; storeId(network.id)" (click)="navigate(network.zelda)">
       <!-- <h4>{{skill.name}}</h4> -->
-      <img
+      <img loading="lazy"
         [src]="over && (network.id == networkId)? theme.name == 'Light'? network.img2Light: network.img2Dark : theme.name == 'Light'? network.img1Light: network.img1Dark"
         alt="">
     </mat-card>

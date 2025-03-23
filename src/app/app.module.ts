@@ -16,6 +16,7 @@ import { ContactFormComponent } from './components/contact/components/contact-fo
 import { FormFieldComponent } from './reusable/form-field/form-field.component';
 import { InputDirective } from './directives/input.directive';
 import { LabelComponent } from './reusable/label/label.component';
+import { DescriptionComponent } from './components/description/description.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LabelComponent } from './reusable/label/label.component';
     FormFieldComponent,
     InputDirective,
     LabelComponent,
+    DescriptionComponent,
   ],
   imports: [
     BrowserModule,
