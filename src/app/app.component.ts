@@ -5,7 +5,7 @@ import { UtilitiesService } from './reusable/services/utilities.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   /**
@@ -16,44 +16,51 @@ export class AppComponent {
   /**
    * Versión actual del proyecto
    */
-  version = VERSION
+  version = VERSION;
 
   /**
    * Items para el navbar
    */
   navItems: object[] = [
-    {url:'Inicio', id: 0},
-    {url:'Proyectos', id: 1},
-    {url:'Tecnologías', id: 2},
-    {url:'Contacto', id: 3},
-  ]
+    { url: 'Inicio', id: 0 },
+    { url: 'Sobre mi', id: 1 },
+    { url: 'Proyectos', id: 2 },
+    { url: 'Tecnologías', id: 3 },
+    { url: 'Contacto', id: 4 },
+  ];
 
   /**
    * Tema de color aplicado
    */
-  themeClass: string  = ''
+  themeClass: string = '';
 
   /**
    * Body element que se encuentra en el index html de la aplicación
    */
-  bodyElement: any
+  bodyElement: any;
 
   //? Lógica para detectar posición de scroll
 
   /**
    * Contiene los ids de los elementos  o secciones principales de la página
    */
-  scrollBreakpointElements: any[] = ['Inicio', 'Proyectos', 'Tecnologías', 'Contacto']
+  scrollBreakpointElements: any[] = [
+    'Inicio',
+    'Sobre mi',
+    'Proyectos',
+    'Tecnologías',
+    'Contacto',
+  ];
 
   /**
    * Indica la posición actual de scroll
    */
-  currentScrollY: number = window.scrollY
+  currentScrollY: number = window.scrollY;
 
   /**
    * Indica en qué sección me encuentro
    */
-  currentScrollSection: string = 'Inicio'
+  currentScrollSection: string = 'Inicio';
 
   /**
    * Escucho el evento de scroll
@@ -61,74 +68,66 @@ export class AppComponent {
    */
   @HostListener('window:scroll', ['$event'])
   onScroll(e: any) {
-
     //* Obtengo la posición actual de scroll
-    this.currentScrollY = window.scrollY
+    this.currentScrollY = window.scrollY;
 
     //* Obtengo la sección en la que estoy parado de acuerdo al scroll
-    this.getScrollSectionPosition()
-
+    this.getScrollSectionPosition();
   }
 
-  constructor(
-    private utilities: UtilitiesService
-  ){
+  constructor(private utilities: UtilitiesService) {}
 
-  }
-
-  ngOnInit(){
-
+  ngOnInit() {
     //* Obtengo la sección en la que estoy parado de acuerdo al scroll
-    this.getScrollSectionPosition()
+    this.getScrollSectionPosition();
 
     //* Obtengo referencia al elemento principal
-    this.bodyElement = document.getElementById('main')
+    this.bodyElement = document.getElementById('main');
 
     //*Obtengo el tema
-    this.retrieveTheme()
+    this.retrieveTheme();
   }
 
   /**
    * Cambia la clase del index html por la del tema de color
    * @param theme
    */
-  applyTheme(theme: any){
+  applyTheme(theme: any) {
     /**
      * Obtengo la clase que debo aplicar
      */
-    this.themeClass = theme.class
+    this.themeClass = theme.class;
 
     /**
      * Aplico la clase al bodyElement
      */
-    this.bodyElement.className = this.themeClass
+    this.bodyElement.className = this.themeClass;
   }
 
   /**
    * Obtiene el tema de color almacenado
    */
-  retrieveTheme(){
-
+  retrieveTheme() {
     //* Obtengo el tema guardado
-    let theme: any = JSON.parse(sessionStorage.getItem('theme-color') as string)
+    let theme: any = JSON.parse(
+      sessionStorage.getItem('theme-color') as string
+    );
 
     //* Si tengo tema, entonces lo aplico
-    if(theme){
+    if (theme) {
       //* Aplico el tema y envío la señal
 
-      this.applyTheme(theme)
+      this.applyTheme(theme);
 
-      this.utilities.updateSignal(theme)
-
-    } else{
+      this.utilities.updateSignal(theme);
+    } else {
       //* Aplico el tema y envío la señal, es este caso obtengo el primero que exista
 
-      let initialTheme: any = THEMES[0]
+      let initialTheme: any = THEMES[0];
 
-      this.applyTheme(initialTheme)
+      this.applyTheme(initialTheme);
 
-      this.utilities.updateSignal(initialTheme)
-
+      this.utilities.updateSignal(initialTheme);
     }
   }
 
@@ -138,6 +137,9 @@ export class AppComponent {
    * Obtiene la posición de scroll e indica en qué elemento estamos parados
    */
   getScrollSectionPosition() {
-    this.currentScrollSection = this.utilities.getActiveSectionByScroll(this.scrollBreakpointElements, this.currentScrollY)
+    this.currentScrollSection = this.utilities.getActiveSectionByScroll(
+      this.scrollBreakpointElements,
+      this.currentScrollY
+    );
   }
 }

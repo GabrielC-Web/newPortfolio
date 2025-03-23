@@ -2,12 +2,12 @@
 
   <img loading="lazy" [src]="image" class="max-w-[300px] rounded-lg" alt=" Just an image of a chill sexy programmer">
 
-  <p>{{description}}</p>
+  <p class="whitespace-pre-line">{{description}}</p>
 
   <!-- Botón de enviar -->
   <button
     [ngClass]="theme.name == 'Light'? ' border border-solid !border-[#303030] ':' !border !border-solid !border-[#fff] '"
-    class="sm:w-6/12 w-full border border-solid mt-8 p-2 active:!border-angel-green active:!text-angel-green rounded"
+    class="sm:w-6/12 w-full border border-solid mt-8 p-2 active:!border-angel-green active:!text-angel-green rounded hover:!border-angel-green hover:!text-angel-green"
     (click)="downloadCV()">
     Descargar CV
   </button>
