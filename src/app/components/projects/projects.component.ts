@@ -78,15 +78,15 @@ export class ProjectsComponent {
       zelda: 'https://gabrielc-web.github.io/pugberto_music_analyzer/',
       imageClass: '!w-full  max-w-[100px] !h-28',
     },
-    {
-      title: 'Next.js Dashboard',
-      id: 3,
-      description:
-        'Una web de ejemplo con un dashboard sencillo y funcional hecho con Nextjs',
-      imgDark: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
-      imgLight: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
-      zelda: 'https://nextjs-dashboard-zeta-three-94.vercel.app/',
-    },
+    // {
+    //   title: 'Next.js Dashboard',
+    //   id: 3,
+    //   description:
+    //     'Una web de ejemplo con un dashboard sencillo y funcional hecho con Nextjs',
+    //   imgDark: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
+    //   imgLight: PROJECT_MINIATURES.NEXTJS_DASHBOARD,
+    //   zelda: 'https://nextjs-dashboard-zeta-three-94.vercel.app/',
+    // },
 
     // {
     //   title: 'Aerodinámica de una vaca',
