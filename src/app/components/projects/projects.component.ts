@@ -18,16 +18,6 @@ export class ProjectsComponent {
 
   @Input() projects: ProjectModel[] = [
     {
-      title: 'Next.js Gallery',
-      id: 4,
-      description:
-        'Una galería con infinidad de imágenes, alimentada por las APIs de Pexels',
-      imgDark: PROJECT_MINIATURES.NEXTJS_GALLERY,
-      imgLight: PROJECT_MINIATURES.NEXTJS_GALLERY,
-      zelda: 'https://next-image-gallery-zdu8.vercel.app',
-    },
-
-    {
       title: 'Tienda de ropa online',
       id: 2,
       description: 'Plantilla para sitio web ecommerce de venta de ropa.',
@@ -52,32 +42,49 @@ export class ProjectsComponent {
       zelda: 'https://gabrielc-web.github.io/books-store-template',
     },
     {
-      title: 'Calculadora en flutter',
-      id: 3,
-      description: 'Calculadora para Android hecha con flutter',
-      imgDark: PROJECT_MINIATURES.CALCULATOR,
-      imgLight: PROJECT_MINIATURES.CALCULATOR,
-      zelda: 'https://www.upload-apk.com/en/nPMerpWitFebzZw',
-    },
-    {
-      title: 'Super Tic Tac Toe!',
-      id: 3,
+      title: 'Next.js Gallery',
+      id: 4,
       description:
-        'Un juego de Tic Tac Toe, pero con una pequeña complejidad añadida',
-      imgDark: PROJECT_MINIATURES.TIC_TAC_TOE,
-      imgLight: PROJECT_MINIATURES.TIC_TAC_TOE,
-      zelda: 'https://gabrielc-web.github.io/super-tic-tac-toe/',
+        'Una galería con infinidad de imágenes, alimentada por las APIs de Pexels',
+      imgDark: PROJECT_MINIATURES.NEXTJS_GALLERY,
+      imgLight: PROJECT_MINIATURES.NEXTJS_GALLERY,
+      zelda: 'https://next-image-gallery-zdu8.vercel.app',
     },
-    {
-      title: 'Pugberto dancing music analyser',
-      id: 1,
-      description:
-        'Este programa te permite reproducir música para obtener un feedback del ritmo de manera divertida y original.',
-      imgDark: PROJECT_MINIATURES.PUGBERTO,
-      imgLight: PROJECT_MINIATURES.PUGBERTO,
-      zelda: 'https://gabrielc-web.github.io/pugberto_music_analyzer/',
-      imageClass: '!w-full  max-w-[100px] !h-28',
-    },
+    // {
+    //   title: 'Tienda de repuestos',
+    //   id: 4,
+    //   description: 'Plantilla para sitio web ecommerce de venta de repuestos.',
+    //   imgDark: PROJECT_MINIATURES.NEXTJS_GALLERY,
+    //   imgLight: PROJECT_MINIATURES.NEXTJS_GALLERY,
+    //   zelda: 'https://gabrielc-web.github.io/hardware-store-template/Productos',
+    // },
+    // {
+    //   title: 'Calculadora en flutter',
+    //   id: 3,
+    //   description: 'Calculadora para Android hecha con flutter',
+    //   imgDark: PROJECT_MINIATURES.CALCULATOR,
+    //   imgLight: PROJECT_MINIATURES.CALCULATOR,
+    //   zelda: 'https://www.upload-apk.com/en/nPMerpWitFebzZw',
+    // },
+    // {
+    //   title: 'Super Tic Tac Toe!',
+    //   id: 3,
+    //   description:
+    //     'Un juego de Tic Tac Toe, pero con una pequeña complejidad añadida',
+    //   imgDark: PROJECT_MINIATURES.TIC_TAC_TOE,
+    //   imgLight: PROJECT_MINIATURES.TIC_TAC_TOE,
+    //   zelda: 'https://gabrielc-web.github.io/super-tic-tac-toe/',
+    // },
+    // {
+    //   title: 'Pugberto dancing music analyser',
+    //   id: 1,
+    //   description:
+    //     'Este programa te permite reproducir música para obtener un feedback del ritmo de manera divertida y original.',
+    //   imgDark: PROJECT_MINIATURES.PUGBERTO,
+    //   imgLight: PROJECT_MINIATURES.PUGBERTO,
+    //   zelda: 'https://gabrielc-web.github.io/pugberto_music_analyzer/',
+    //   imageClass: '!w-full  max-w-[100px] !h-28',
+    // },
     // {
     //   title: 'Next.js Dashboard',
     //   id: 3,
