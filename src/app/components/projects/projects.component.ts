@@ -122,14 +122,14 @@ export class ProjectsComponent {
   openDetail(project: any): void {
     const dialogRef = this.dialog.open(ProjectDialogComponent, {
       data: project,
-      // height: '500px',
       width: '700px',
       maxWidth: '90vw',
-      height: 'fit-content',
+      // height: '100%',
       maxHeight: '600px',
       minHeight: '350px',
       restoreFocus: false,
       autoFocus: false,
+      panelClass: 'components-bg',
     });
   }
 
