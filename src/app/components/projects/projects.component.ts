@@ -46,8 +46,8 @@ export class ProjectsComponent {
       id: 4,
       description:
         'Una galería con infinidad de imágenes, alimentada por las APIs de Pexels',
-      imgDark: PROJECT_MINIATURES.NEXTJS_GALLERY,
-      imgLight: PROJECT_MINIATURES.NEXTJS_GALLERY,
+      imgDark: PROJECT_MINIATURES.PHOTO_GROOVE,
+      imgLight: PROJECT_MINIATURES.PHOTO_GROOVE,
       zelda: 'https://next-image-gallery-zdu8.vercel.app',
     },
     // {

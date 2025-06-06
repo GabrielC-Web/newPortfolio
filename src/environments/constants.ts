@@ -40,6 +40,7 @@ export const PROJECT_MINIATURES = {
   TIC_TAC_TOE: 'assets/projects/super_tic_tac_toe.png',
   NEXTJS_DASHBOARD: 'assets/projects/nextjs_dashboard.png',
   NEXTJS_GALLERY: 'assets/projects/nextjs_gallery.png',
+  PHOTO_GROOVE: 'assets/projects/photogroove.png',
 };
 
 //Redes sociales
