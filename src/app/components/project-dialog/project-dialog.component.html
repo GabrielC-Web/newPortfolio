@@ -1,12 +1,15 @@
-<section class="relative m-auto components-bg h-full w-full">
+<section class="relative m-auto components-bg h-full w-full p-6">
 
-  <h5 matDialogTitle class="text-center mt-2 !font-bold flex pt-2">
-    {{data.title}}
-  </h5>
 
   <!-- Botón de cerrar -->
-  <div class="absolute top-0 right-0 p-2 cursor-pointer" (click)="close()">
+  <div class="w-full flex justify-end items-center p-2 cursor-pointer" (click)="close()">
     <mat-icon [ngClass]="theme.name == 'Light'?'text-black':'text-white'">clear</mat-icon>
+  </div>
+
+  <div class="w-full flex justify-center items-center">
+    <h4 class="text-center mt-2 !font-bold flex pt-2">
+      {{data.title}}
+    </h4>
   </div>
 
   <!-- Contenido principal -->
@@ -17,13 +20,14 @@
         <img loading="lazy" class="h-full max-h-full" [src]="theme.name == 'Light'? data.imgLight:data.imgDark" />
       </div>
       <!-- Texto del diálogo, descripción -->
-      <div class="w-full px-3 h-full flex p-0 flex-col justify-between"
+      <div class="w-full px-3 h-full flex p-0 flex-col justify-between items-center"
         [ngClass]="data.zelda?'items-stretch justify-between':'items-center justify-center'">
-        <p class="my-3 text-justify" [ngClass]="theme.name == 'Light'?'text-black':'text-white'">
+        <p class="my-3 text-center" [ngClass]="theme.name == 'Light'?'text-black':'text-white'">
           {{data.description}}
         </p>
         <!-- Enlace a otro sitio web, en caso de que haya -->
-        <a *ngIf="data.zelda" class="break-all mt-1" href="{{data.zelda}}" target="_blank" style="font-weight: 600">
+        <a *ngIf="data.zelda" class="break-all mt-1 text-center" href="{{data.zelda}}" target="_blank"
+          style="font-weight: 600">
           <span>Mira esto 😎: </span>
           <span class="text-cyan-600">{{data.zelda}}</span>
         </a>

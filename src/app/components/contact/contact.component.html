@@ -1,13 +1,13 @@
 <section class="flex justify-center items-center flex-col w-full mt-16">
 
-  <mat-card class="w-8/12 bg-dark-components p-6 sm:p-12 !rounded-lg mt-2 shadow-border max-w-[755px] components-bg">
+  <mat-card class="w-8/12 bg-dark-components p-6 sm:p-12 mt-2 shadow-border max-w-[755px] components-bg">
     <cool-contact-form></cool-contact-form>
   </mat-card>
 
   <div class="flex justify-center items-center my-8 gap-8">
 
     <mat-card matTooltip="{{network.title}}"
-      class="technologyItem !rounded-lg hover:scale-110 hover:border hover:border-angel-green shadow-border components-bg"
+      class="technologyItem hover:scale-110 hover:border hover:border-angel-green shadow-border components-bg"
       *ngFor="let network of socialNetworks; let i = index" (mouseover)="over = true; storeId(network.id)"
       (mouseleave)="over = false; storeId(network.id)" (click)="navigate(network.zelda)">
       <!-- <h4>{{skill.name}}</h4> -->

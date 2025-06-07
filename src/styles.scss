@@ -67,6 +67,24 @@ body {
   box-sizing: border-box;
 }
 
+//* Background general
 .components-bg {
   background-color: #101011 !important;
+}
+
+//* Font sizes
+
+h4 {
+  font-size: 1.25rem !important;
+}
+
+p {
+  font-size: 1.125rem !important;
+}
+
+button,
+mat-card,
+.cdk-overlay-pane,
+.mat-mdc-dialog-surface {
+  border-radius: 0.75rem !important;
 }

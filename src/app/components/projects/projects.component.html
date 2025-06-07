@@ -1,8 +1,8 @@
 <section class="flex justify-center items-center flex-col">
-  <div class="grid px-3 gap-12 mt-12 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+  <div class="grid px-6 gap-12 mt-12 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
     <!-- Caja de proyecto -->
     <mat-card
-      class="w-full sm:w-[350px] relative hover:scale-105 !rounded-lg flex flex-col justify-center border-none hover:border hover:border-angel-green shadow-border cursor-pointer components-bg"
+      class="w-full sm:w-[350px] relative hover:scale-105 flex flex-col justify-center border-none hover:border hover:border-angel-green shadow-border cursor-pointer components-bg"
       *ngFor="let project of projects" (click)="openDetail(project)">
 
       <div class="h-5/6 flex items-center justify-center flex-col">
@@ -10,13 +10,15 @@
         <!-- Imagen descriptiva -->
         <mat-card-content class="px-3 py-4 w-full h-72 max-h-72 min-h-72 !flex justify-center items-start"
           [ngClass]="project.imageClass">
-          <img loading="lazy" class="h-auto max-h-full aspect-auto justify-self-center !rounded-lg" mat-card-image
+          <img loading="lazy" class="h-auto max-h-full aspect-auto justify-self-center" mat-card-image
             [src]="theme.name == 'Light'? project.imgLight:project.imgDark" alt="">
         </mat-card-content>
 
         <!-- Título de proyecto -->
         <mat-card-header class="flex-centered">
-          <mat-card-title class="text-center">{{project.title}}</mat-card-title>
+          <mat-card-title class="text-center">
+            <h4>{{project.title}}</h4>
+          </mat-card-title>
         </mat-card-header>
 
         <!-- Botón -->
