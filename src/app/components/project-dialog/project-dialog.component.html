@@ -6,8 +6,10 @@
     <mat-icon [ngClass]="theme.name == 'Light'?'text-black':'text-white'">clear</mat-icon>
   </div>
 
-  <div class="w-full flex justify-center items-center">
-    <h4 class="text-center mt-2 !font-bold flex pt-2">
+  <div class="w-full flex justify-center items-center gap-3 mt-2">
+    <img *ngIf="data.techImageUrlLight && data.techImageUrlDark" loading="lazy" class="w-6 h-6"
+      [src]="theme.name == 'Light'? data.techImageUrlLight:data.techImageUrlDark" />
+    <h4 class="text-center !font-bold flex">
       {{data.title}}
     </h4>
   </div>

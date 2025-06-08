@@ -2,7 +2,12 @@ import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectModel } from 'src/app/models/general.model';
 import { UtilitiesService } from 'src/app/reusable/services/utilities.service';
-import { PROJECT_MINIATURES } from 'src/environments/constants';
+import {
+  ANGULAR,
+  NEXTJS,
+  NEXTJS_WHITE,
+  PROJECT_MINIATURES,
+} from 'src/environments/constants';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
 @Component({
@@ -24,6 +29,8 @@ export class ProjectsComponent {
       imgDark: PROJECT_MINIATURES.ECOMMERCE,
       imgLight: PROJECT_MINIATURES.ECOMMERCE,
       zelda: 'https://gabrielc-web.github.io/clothes-store-template',
+      techImageUrlLight: ANGULAR,
+      techImageUrlDark: ANGULAR,
     },
     {
       title: 'Tienda de maquillaje online',
@@ -32,6 +39,8 @@ export class ProjectsComponent {
       imgDark: PROJECT_MINIATURES.MAKEUP,
       imgLight: PROJECT_MINIATURES.MAKEUP,
       zelda: 'https://gabrielc-web.github.io/makeup-store-template',
+      techImageUrlLight: ANGULAR,
+      techImageUrlDark: ANGULAR,
     },
     {
       title: 'Tienda de libros online',
@@ -40,6 +49,8 @@ export class ProjectsComponent {
       imgDark: PROJECT_MINIATURES.BOOKS,
       imgLight: PROJECT_MINIATURES.BOOKS,
       zelda: 'https://gabrielc-web.github.io/books-store-template',
+      techImageUrlLight: ANGULAR,
+      techImageUrlDark: ANGULAR,
     },
     {
       title: 'Next.js Gallery',
@@ -49,6 +60,8 @@ export class ProjectsComponent {
       imgDark: PROJECT_MINIATURES.PHOTO_GROOVE,
       imgLight: PROJECT_MINIATURES.PHOTO_GROOVE,
       zelda: 'https://next-image-gallery-zdu8.vercel.app',
+      techImageUrlLight: NEXTJS,
+      techImageUrlDark: NEXTJS_WHITE,
     },
     // {
     //   title: 'Tienda de repuestos',

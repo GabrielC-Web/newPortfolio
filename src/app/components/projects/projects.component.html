@@ -17,7 +17,11 @@
         <!-- Título de proyecto -->
         <mat-card-header class="flex-centered">
           <mat-card-title class="text-center">
-            <h4>{{project.title}}</h4>
+            <div class="flex justify-between items-center gap-3">
+              <img loading="lazy" class="w-6 h-6"
+                [src]="theme.name == 'Light'? project.techImageUrlLight:project.techImageUrlDark" />
+              <h4>{{project.title}}</h4>
+            </div>
           </mat-card-title>
         </mat-card-header>
 
