@@ -53,7 +53,7 @@ export class ProjectsComponent {
       techImageUrlDark: ANGULAR,
     },
     {
-      title: 'Next.js Gallery',
+      title: 'Infinite Images Gallery',
       id: 4,
       description:
         'Una galería con infinidad de imágenes, alimentada por las APIs de Pexels',
