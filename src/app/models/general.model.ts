@@ -12,3 +12,14 @@ export interface ProjectModel {
   techImageUrlLight: string;
   techImageUrlDark: string;
 }
+
+export interface ThemeModel {
+  background: string;
+  components: string;
+  'contrast-color': string;
+  name: string;
+  class: string;
+  classBorder: string;
+  textContrastColor: string;
+  buttonClass: string;
+}

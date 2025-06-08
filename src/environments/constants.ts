@@ -65,16 +65,6 @@ export const GITHUB2_LIGHT =
 //Temas de color
 export const THEMES = [
   {
-    background: '#000000',
-    components: '#101011',
-    'contrast-color': '',
-    name: 'Real Dark',
-    class: 'dark-mode',
-    classBorder: ' !border !border-solid !border-[#fff] ',
-    textContrastColor: ' !text-[#fff] ',
-    buttonClass: ' !border !border-solid !border-[#fff] !text-[#fff] ',
-  },
-  {
     background: '#F2F4F4',
     components: '#E8E8E8',
     'contrast-color': '#303030',
@@ -83,6 +73,16 @@ export const THEMES = [
     classBorder: ' !border !border-solid !border-[#303030] ',
     textContrastColor: ' !text-[#303030] ',
     buttonClass: ' !border !border-solid !border-[#303030] !text-[#303030] ',
+  },
+  {
+    background: '#000000',
+    components: '#101011',
+    'contrast-color': '',
+    name: 'Real Dark',
+    class: 'dark-mode',
+    classBorder: ' !border !border-solid !border-[#fff] ',
+    textContrastColor: ' !text-[#fff] ',
+    buttonClass: ' !border !border-solid !border-[#fff] !text-[#fff] ',
   },
 ];
 

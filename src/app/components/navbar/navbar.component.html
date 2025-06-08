@@ -32,23 +32,13 @@
     </mat-menu>
 
     <!-- Selección de temas de color -->
-    <button mat-icon-button matTooltip="Selecciona Tema de color" [matMenuTriggerFor]="setTheme" class="example-icon"
-      aria-label="Example icon-button with menu icon">
+    <button mat-icon-button matTooltip="Selecciona Tema de color" class="example-icon"
+      aria-label="Example icon-button with menu icon" (click)="setThemeColor()">
 
       <!-- <mat-icon class="text-angel-green">format_color_fill</mat-icon> -->
       <img loading="lazy" src="assets/iconos/version_oscura/cambio_color_version_oscura.svg" alt="">
 
     </button>
-
-    <!-- Menú interno de selección de color -->
-    <mat-menu #setTheme="matMenu">
-
-      <button mat-menu-item *ngFor="let item of themes" (click)="setThemeColor(item)">
-        {{item.name}}
-      </button>
-
-    </mat-menu>
-
   </div>
 
 </nav>
